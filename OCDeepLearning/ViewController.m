@@ -23,13 +23,8 @@
     // Do any additional setup after loading the view, typically from a nib.
 
 //    [self testAutoReleasePool];
-
-//    AClass *a = [[AClass alloc] init];
-//    NSLog(@"AName是%@",a.Aname);
-
-    [self testGCD];
+//    [self testGCD];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -37,7 +32,6 @@
 }
 
 // MARK: 测试自动释放池
-
 - (void)testAutoReleasePool {
     OCAutoReleasePool *testPool = [[OCAutoReleasePool alloc] init];
     //没有加入自动释放池
@@ -50,18 +44,6 @@
     [testPool monitorAsyncAutoReleasePool];
 }
 
-
-- (void)changeBackgroundColor {
-//    self.view.backgroundColor = [UIColor yellowColor];
-    [self.view setBackgroundColor:[UIColor redColor]];
-    NSLog(@"改变背景颜色");
-}
-
-// MARK: 测试load的方法交换
-- (void)exchangeMethod {
-        NSLog(@"交换之后的方法");
-}
-
 // MARK: 测试GCD
 - (void)testGCD {
     GCDLearning *gcd = [[GCDLearning alloc] init];
@@ -72,21 +54,8 @@
     });
 }
 
-
 @end
 
-#import <objc/runtime.h>
 
 
-@implementation ViewController (Runtime)
 
-//+ (void)load {
-//    Method m1 = class_getInstanceMethod([ViewController class], @selector(changeBackgroundColor));
-//    Method m2 = class_getInstanceMethod([ViewController class], @selector(exchangeMethod));
-//    
-//    NSLog(@"%p",m2);
-//    NSLog(@"%p",m1);
-//
-//    method_exchangeImplementations(m1, m2);
-//}
-@end
