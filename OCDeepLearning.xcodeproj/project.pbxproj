@@ -18,6 +18,8 @@
 		5D5F4EB31F0F67BF000DE712 /* OCAutoReleasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4EB21F0F67BF000DE712 /* OCAutoReleasePool.m */; };
 		5D5F4EB61F0F7215000DE712 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4EB51F0F7215000DE712 /* NSObject+Runtime.m */; };
 		5D77E5741F14D9EE005A8459 /* GCDLearning.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D77E5731F14D9EE005A8459 /* GCDLearning.m */; };
+		5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */; };
+		5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		5DAABF9D1F135DEF0089460B /* AClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AClass.m; sourceTree = "<group>"; };
 		5DAABF9F1F135DF70089460B /* BClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BClass.h; path = Assets.xcassets/BClass.h; sourceTree = "<group>"; };
 		5DAABFA01F135DF70089460B /* BClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BClass.m; path = Assets.xcassets/BClass.m; sourceTree = "<group>"; };
+		5DF622CE1F161E5200D74036 /* ViewController+SwizzlingMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+SwizzlingMethod.h"; sourceTree = "<group>"; };
+		5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+SwizzlingMethod.m"; sourceTree = "<group>"; };
+		5DF622D21F1620DD00D74036 /* NSObject+GBRuntimeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GBRuntimeLog.h"; sourceTree = "<group>"; };
+		5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GBRuntimeLog.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +120,13 @@
 		5D5F4E7D1F0F6786000DE712 /* OCDeepLearning */ = {
 			isa = PBXGroup;
 			children = (
+				5DF622D11F1620DD00D74036 /* GBRuntimeLog */,
 				5D5F4E811F0F6786000DE712 /* AppDelegate.h */,
 				5D5F4E821F0F6786000DE712 /* AppDelegate.m */,
 				5D5F4E841F0F6786000DE712 /* ViewController.h */,
 				5D5F4E851F0F6786000DE712 /* ViewController.m */,
+				5DF622CE1F161E5200D74036 /* ViewController+SwizzlingMethod.h */,
+				5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */,
 				5D77E5771F14E2C5005A8459 /* ARC */,
 				5D77E5761F14E293005A8459 /* Runtime */,
 				5D77E5751F14E283005A8459 /* GCD */,
@@ -193,6 +202,15 @@
 				5DAABFA01F135DF70089460B /* BClass.m */,
 			);
 			name = TestLoad;
+			sourceTree = "<group>";
+		};
+		5DF622D11F1620DD00D74036 /* GBRuntimeLog */ = {
+			isa = PBXGroup;
+			children = (
+				5DF622D21F1620DD00D74036 /* NSObject+GBRuntimeLog.h */,
+				5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */,
+			);
+			path = GBRuntimeLog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +352,8 @@
 				5D5F4EB31F0F67BF000DE712 /* OCAutoReleasePool.m in Sources */,
 				5D5F4E861F0F6786000DE712 /* ViewController.m in Sources */,
 				5D5F4EB61F0F7215000DE712 /* NSObject+Runtime.m in Sources */,
+				5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */,
+				5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */,
 				5D5F4E831F0F6786000DE712 /* AppDelegate.m in Sources */,
 				5D77E5741F14D9EE005A8459 /* GCDLearning.m in Sources */,
 				5D5F4E801F0F6786000DE712 /* main.m in Sources */,
