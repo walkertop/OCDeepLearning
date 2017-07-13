@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController (SwizzlingMethod)
+
 + (void)load;
 
 @end
