@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface GCDLearning : NSObject
-
-
 - (void)testQueue;  
 - (void)testGroup;
 @end

@@ -22,7 +22,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-//    [self testAutoReleasePool];
+    [self testAutoReleasePool];
 //    [self testGCD];
 }
 
@@ -35,13 +35,14 @@
 - (void)testAutoReleasePool {
     OCAutoReleasePool *testPool = [[OCAutoReleasePool alloc] init];
     //没有加入自动释放池
-//    [testPool createNumbersOfObjects];
-    
+//    [testPool createNumbersOfObjects];=
 //    //加入自动释放池
 //    [testPool createNumbersOfObjectsByautoReleasePool];
     
     //检测异步线程自动释放池
     [testPool monitorAsyncAutoReleasePool];
+    //开启子线程的runloop并将NSTimer事件添加进去才可以
+    [testPool testTimerInAsync];
 }
 
 // MARK: 测试GCD

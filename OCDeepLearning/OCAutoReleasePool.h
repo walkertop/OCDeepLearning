@@ -14,11 +14,6 @@
 - (void)createNumbersOfObjects;
 - (void)createNumbersOfObjectsByautoReleasePool;
 - (void)monitorAsyncAutoReleasePool;
-
+- (void)testTimerInAsync;
 @end
 
-@interface OCAutoReleasePool (Runtime)
-
-+ (void)load;
-
-@end
