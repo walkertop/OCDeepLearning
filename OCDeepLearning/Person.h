@@ -10,8 +10,6 @@
 
 @interface Person : NSObject
 
-@property(nonatomic, strong) NSString *name;
-
 - (void)run;
 - (void)fly;
 - (void)die;
