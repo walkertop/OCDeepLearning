@@ -97,6 +97,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D45A24B1F171EBB00D60780 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				5DF622D11F1620DD00D74036 /* GBRuntimeLog */,
+				5DF622CE1F161E5200D74036 /* ViewController+SwizzlingMethod.h */,
+				5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
 		5D5F4E721F0F6786000DE712 = {
 			isa = PBXGroup;
 			children = (
@@ -120,20 +130,12 @@
 		5D5F4E7D1F0F6786000DE712 /* OCDeepLearning */ = {
 			isa = PBXGroup;
 			children = (
-				5DF622D11F1620DD00D74036 /* GBRuntimeLog */,
-				5D5F4E811F0F6786000DE712 /* AppDelegate.h */,
-				5D5F4E821F0F6786000DE712 /* AppDelegate.m */,
+				5D45A24B1F171EBB00D60780 /* Category */,
 				5D5F4E841F0F6786000DE712 /* ViewController.h */,
 				5D5F4E851F0F6786000DE712 /* ViewController.m */,
-				5DF622CE1F161E5200D74036 /* ViewController+SwizzlingMethod.h */,
-				5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */,
 				5D77E5771F14E2C5005A8459 /* ARC */,
 				5D77E5761F14E293005A8459 /* Runtime */,
 				5D77E5751F14E283005A8459 /* GCD */,
-				5D5F4E871F0F6786000DE712 /* Main.storyboard */,
-				5D5F4E8A1F0F6786000DE712 /* Assets.xcassets */,
-				5D5F4E8C1F0F6786000DE712 /* LaunchScreen.storyboard */,
-				5D5F4E8F1F0F6786000DE712 /* Info.plist */,
 				5D5F4E7E1F0F6786000DE712 /* Supporting Files */,
 			);
 			path = OCDeepLearning;
@@ -142,6 +144,12 @@
 		5D5F4E7E1F0F6786000DE712 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D5F4E811F0F6786000DE712 /* AppDelegate.h */,
+				5D5F4E821F0F6786000DE712 /* AppDelegate.m */,
+				5D5F4E871F0F6786000DE712 /* Main.storyboard */,
+				5D5F4E8A1F0F6786000DE712 /* Assets.xcassets */,
+				5D5F4E8C1F0F6786000DE712 /* LaunchScreen.storyboard */,
+				5D5F4E8F1F0F6786000DE712 /* Info.plist */,
 				5D5F4E7F1F0F6786000DE712 /* main.m */,
 			);
 			name = "Supporting Files";

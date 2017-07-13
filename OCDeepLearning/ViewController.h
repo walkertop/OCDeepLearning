@@ -9,14 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-- (void)changeBackgroundColor;
-- (void)exchangeMethod;
 
 @end
-
-
-//@interface ViewController (Runtime)
-//
-//+ (void)load;
-//
-//@end
