@@ -31,14 +31,19 @@
 ### ARC
 * 内部循环使用自动释放池
 *
+
+### NSRunloop
+* 子线程的NSTimer和NSRunLoop
+
+```
+子线程有RunLoop，但默认不开启，
+而NSTimer事件依赖NSRunLoop，
+只有手动开启子线程的NSRunLoop，
+并将NSTimer添加进去才可以运行。
+```
 ### Runtime
 * `load` 和 `initialize`方法初探
 * `swizzling method`
-* 
-
-## GCD
-
-
 
 ## 文末
 主要是针对各种魔法提供代码的用例以及高级技巧的使用介绍。
