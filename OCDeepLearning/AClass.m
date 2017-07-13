@@ -11,14 +11,14 @@
 @implementation AClass
 
 + (void)load {
-    BClass *b = [[BClass alloc] init];
-    NSLog(@"%@",b);
-    NSLog(@"当前类是%@",[self class]);
+//    BClass *b = [[BClass alloc] init];
+//    NSLog(@"%@",b);
+//    NSLog(@"当前类是%@",[self class]);
 }
 
 + (void)initialize {
-    BClass *b = [[BClass alloc] init];
-    NSLog(@"%@",b);
-    NSLog(@"当前类是%@",[self class]);
+//    BClass *b = [[BClass alloc] init];
+//    NSLog(@"%@",b);
+//    NSLog(@"当前类是%@",[self class]);
 }
 @end
