@@ -7,10 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "OCAutoReleasePool.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
+#import "OCAutoReleasePool.h"
 #import "AClass.h"
 #import "GCDLearning.h"
+#import "Person.h"
+#import "Animal.h"
 
 @interface ViewController ()
 
@@ -22,8 +25,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    [self testAutoReleasePool];
+//    [self testAutoReleasePool];
 //    [self testGCD];
+    [self testForwardingMethod];
+    [self testResolveInstanceMethod];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,6 +61,24 @@
     });
 }
 
+// MARK: 消息转发
+- (void)testForwardingMethod {
+    Person *person = [[Person alloc] init];
+    
+    //实例方法
+    [person run];       //  [person run]   等于  objc_msgSend(person,@selector(run))
+    [person fly];
+    [person die];
+    
+    //类方法的消息转发
+    [Person classDie];
+}
+
+// 测试动态加载方法
+- (void)testResolveInstanceMethod {
+    Animal *ani = [[Animal alloc] init];
+    [ani swim];
+}
 @end
 
 
