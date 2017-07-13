@@ -14,6 +14,8 @@
 		5D45A25A1F17724600D60780 /* Person+ForwardMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D45A2591F17724600D60780 /* Person+ForwardMessage.m */; };
 		5D45A25D1F1776F600D60780 /* Bird.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D45A25C1F1776F600D60780 /* Bird.m */; };
 		5D45A2611F177CF600D60780 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D45A2601F177CF600D60780 /* Animal.m */; };
+		5D45A2651F17828A00D60780 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D45A2641F17828A00D60780 /* UserModel.m */; };
+		5D45A2681F1782D200D60780 /* NSObject+MakeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D45A2671F1782D200D60780 /* NSObject+MakeModel.m */; };
 		5D5F4E801F0F6786000DE712 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4E7F1F0F6786000DE712 /* main.m */; };
 		5D5F4E831F0F6786000DE712 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4E821F0F6786000DE712 /* AppDelegate.m */; };
 		5D5F4E861F0F6786000DE712 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4E851F0F6786000DE712 /* ViewController.m */; };
@@ -57,6 +59,10 @@
 		5D45A25C1F1776F600D60780 /* Bird.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bird.m; sourceTree = "<group>"; };
 		5D45A25F1F177CF600D60780 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
 		5D45A2601F177CF600D60780 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		5D45A2631F17828A00D60780 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		5D45A2641F17828A00D60780 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		5D45A2661F1782D200D60780 /* NSObject+MakeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MakeModel.h"; sourceTree = "<group>"; };
+		5D45A2671F1782D200D60780 /* NSObject+MakeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MakeModel.m"; sourceTree = "<group>"; };
 		5D5F4E7B1F0F6786000DE712 /* OCDeepLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCDeepLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5F4E7F1F0F6786000DE712 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D5F4E811F0F6786000DE712 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -143,6 +149,17 @@
 			name = "动态加载";
 			sourceTree = "<group>";
 		};
+		5D45A2621F17822B00D60780 /* 字典转模型 */ = {
+			isa = PBXGroup;
+			children = (
+				5D45A2631F17828A00D60780 /* UserModel.h */,
+				5D45A2641F17828A00D60780 /* UserModel.m */,
+				5D45A2661F1782D200D60780 /* NSObject+MakeModel.h */,
+				5D45A2671F1782D200D60780 /* NSObject+MakeModel.m */,
+			);
+			name = "字典转模型";
+			sourceTree = "<group>";
+		};
 		5D5F4E721F0F6786000DE712 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +238,7 @@
 		5D77E5761F14E293005A8459 /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
+				5D45A2621F17822B00D60780 /* 字典转模型 */,
 				5D45A25E1F177CD000D60780 /* 动态加载 */,
 				5D45A24D1F1763E600D60780 /* 消息转发流程 */,
 				5DAABFA21F136B210089460B /* TestLoad */,
@@ -396,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D45A25D1F1776F600D60780 /* Bird.m in Sources */,
+				5D45A2681F1782D200D60780 /* NSObject+MakeModel.m in Sources */,
 				5D45A2571F176C4000D60780 /* AClass.m in Sources */,
 				5D5F4EB31F0F67BF000DE712 /* OCAutoReleasePool.m in Sources */,
 				5D5F4E861F0F6786000DE712 /* ViewController.m in Sources */,
@@ -406,6 +425,7 @@
 				5D5F4E831F0F6786000DE712 /* AppDelegate.m in Sources */,
 				5D77E5741F14D9EE005A8459 /* GCDLearning.m in Sources */,
 				5D5F4E801F0F6786000DE712 /* main.m in Sources */,
+				5D45A2651F17828A00D60780 /* UserModel.m in Sources */,
 				5D45A2611F177CF600D60780 /* Animal.m in Sources */,
 				5D45A25A1F17724600D60780 /* Person+ForwardMessage.m in Sources */,
 				5D45A2521F1769FD00D60780 /* BClass.m in Sources */,

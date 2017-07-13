@@ -14,6 +14,8 @@
 #import "GCDLearning.h"
 #import "Person.h"
 #import "Animal.h"
+#import "UserModel.h"
+#import "NSObject+MakeModel.h"
 
 @interface ViewController ()
 
@@ -29,6 +31,7 @@
 //    [self testGCD];
     [self testForwardingMethod];
     [self testResolveInstanceMethod];
+    [self testKVC];
     
 }
 
@@ -79,7 +82,33 @@
     Animal *ani = [[Animal alloc] init];
     [ani swim];
 }
+
+//字典转模型
+- (void)testKVC {
+    // 从网络请求数据
+    //次数据从网上获取
+    NSString *githubAPI = @"https://api.github.com/users/Tuccuay";
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:githubAPI]];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                                                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+                                                
+                                                // 因为 Github 的 API 中有一个字段是 id
+                                                // 而 id 在 Objective-C 中已经被占用
+                                                // GithubUser *tuccuay = [GithubUser modelWithDict:dict];
+                                                
+                                                // 所以把 id 替换成 ID
+                                                UserModel *userModel = [UserModel modelWithDict:dict updateDict:@{@"ID":@"id"}];
+                                                
+                                                // 给下面的 NSLog 打个断点
+                                                // 从调试器里能看见上面的 tuccuay 模型已经转好了
+                                                NSLog(@"mew~");
+                                            }];
+    [task resume];
+}
 @end
+
 
 
 
