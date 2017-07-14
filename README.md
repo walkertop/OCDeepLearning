@@ -1,11 +1,12 @@
 # OCDeepLearning
 ## OC的高级用法和学习
 
-###文章主要包含以下部分：
+### 文章主要包含以下部分：
 
 * OC的黑魔法
 * 底层的方法
-
+    * IMP,SEL,Method的本质
+    * 添加IMP实现方法调用（OC_IMP.h类）  
 * 内存管理
     * 自动释放池
     * ARC和MRC
@@ -19,7 +20,6 @@
         *   `Dispatch Group`
             * notify
             * wait
-   
         *   `dispatch_barrier_aync`
         *   `dispatch_set-target-queue`
         *   `dispatch_after`
@@ -43,7 +43,8 @@
 ```
 ### Runtime
 * `load` 和 `initialize`方法初探
-* `swizzling method`
+* `swizzling method`系列
+* `SEL`，`IMP`，`Method`的区别
 
 ## 文末
 主要是针对各种魔法提供代码的用例以及高级技巧的使用介绍。

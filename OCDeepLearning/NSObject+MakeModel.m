@@ -7,7 +7,7 @@
 //
 
 #import "NSObject+MakeModel.h"
-#import <objc/Object.h>
+#import <objc/runtime.h>
 
 @implementation NSObject (MakeModel)
 
