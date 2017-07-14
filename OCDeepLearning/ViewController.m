@@ -16,6 +16,9 @@
 #import "Animal.h"
 #import "UserModel.h"
 #import "NSObject+MakeModel.h"
+#import "OC_SEL.h"
+#import "OC_IMP.h"
+#import "OC_Method.h"
 
 @interface ViewController ()
 
@@ -29,9 +32,12 @@
 
 //    [self testAutoReleasePool];
 //    [self testGCD];
-    [self testForwardingMethod];
-    [self testResolveInstanceMethod];
-    [self testKVC];
+//    [self testForwardingMethod];
+//    [self testResolveInstanceMethod];
+//    [self testKVC];
+    
+//    [self testOCSEL];
+    [self testSELIMPMEthod];
     
 }
 
@@ -107,6 +113,29 @@
                                             }];
     [task resume];
 }
+
+// MARK: 测试SEl-IMP-Method
+- (void)testSELIMPMEthod {
+    [self testOCSEL];
+    [self testOCIMP];
+    [self testMethod];
+}
+- (void)testOCSEL {
+    OC_SEL *oc_sel = [[OC_SEL alloc] init];
+    [oc_sel testSEL];
+}
+
+- (void)testOCIMP {
+    OC_IMP *oc_imp = [[OC_IMP alloc] init];
+    [oc_imp testIMP];
+}
+
+- (void)testMethod {
+    OC_Method *method = [[OC_Method alloc] init];
+    [method testMethod];
+    
+}
+
 @end
 
 
