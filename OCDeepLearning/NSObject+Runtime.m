@@ -13,11 +13,8 @@
 @implementation NSObject (Runtime)
 
 + (void)load {
-<<<<<<< HEAD
-    [[self class] exchangeInstanceMethod:@selector(viewDidAppear:) SwizzledMethod:@selector(xxx_viewWillAppear:)];
-=======
+    
 //    [[self class] exchangeInstanceMethod:@selector(viewDidAppear:) SwizzledMethod:@selector(xxx_viewWillAppear:)];
->>>>>>> develop
 }
 
 #pragma mark - Method Swizzling
