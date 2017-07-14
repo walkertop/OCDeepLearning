@@ -42,9 +42,11 @@
 并将NSTimer添加进去才可以运行。
 ```
 ### Runtime
+ * [消息转发代码实现](https://github.com/walkertop/OCDeepLearning/blob/master/消息转发流程.md)  
 * `load` 和 `initialize`方法初探
 * `swizzling method`系列
 * `SEL`，`IMP`，`Method`的区别
+    [SEL&IMP&Method区别](https://github.com/walkertop/OCDeepLearning/blob/master/SEL-IMP-Method解析.md)
 
 ## 文末
 主要是针对各种魔法提供代码的用例以及高级技巧的使用介绍。
