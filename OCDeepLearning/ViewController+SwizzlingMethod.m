@@ -11,7 +11,11 @@
 
 @implementation ViewController (SwizzlingMethod)
 
+<<<<<<< HEAD
 //+ (void)load {
+=======
++ (void)load {
+>>>>>>> develop
 //    Method m1 = class_getInstanceMethod([ViewController class], @selector(viewDidAppear:));
 //    Method m2 = class_getInstanceMethod([ViewController class], @selector(gb_viewDidAppear:));
 //
@@ -23,7 +27,11 @@
 //    NSLog(@"method分别是%p,/n %p",m1,m2);
 //
 //    method_exchangeImplementations(m1, m2);
+<<<<<<< HEAD
 //}
+=======
+}
+>>>>>>> develop
 
 - (void)gb_viewDidAppear:(BOOL)animated {
     [self gb_viewDidAppear:YES];

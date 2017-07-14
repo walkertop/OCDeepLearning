@@ -7,10 +7,18 @@
 //
 
 #import "ViewController.h"
-#import "OCAutoReleasePool.h"
 #import <objc/runtime.h>
+#import <objc/message.h>
+#import "OCAutoReleasePool.h"
 #import "AClass.h"
 #import "GCDLearning.h"
+#import "Person.h"
+#import "Animal.h"
+#import "UserModel.h"
+#import "NSObject+MakeModel.h"
+#import "OC_SEL.h"
+#import "OC_IMP.h"
+#import "OC_Method.h"
 
 @interface ViewController ()
 
@@ -22,8 +30,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    [self testAutoReleasePool];
+//    [self testAutoReleasePool];
 //    [self testGCD];
+//    [self testForwardingMethod];
+//    [self testResolveInstanceMethod];
+//    [self testKVC];
+    
+//    [self testOCSEL];
+    [self testSELIMPMEthod];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,7 +70,74 @@
     });
 }
 
+// MARK: 消息转发
+- (void)testForwardingMethod {
+    Person *person = [[Person alloc] init];
+    
+    //实例方法
+    [person run];       //  [person run]   等于  objc_msgSend(person,@selector(run))
+    [person fly];
+    [person die];
+    
+    //类方法的消息转发
+    [Person classDie];
+}
+
+// 测试动态加载方法
+- (void)testResolveInstanceMethod {
+    Animal *ani = [[Animal alloc] init];
+    [ani swim];
+}
+
+//字典转模型
+- (void)testKVC {
+    // 从网络请求数据
+    //次数据从网上获取
+    NSString *githubAPI = @"https://api.github.com/users/Tuccuay";
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:githubAPI]];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+                                                NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+                                                
+                                                // 因为 Github 的 API 中有一个字段是 id
+                                                // 而 id 在 Objective-C 中已经被占用
+                                                // GithubUser *tuccuay = [GithubUser modelWithDict:dict];
+                                                
+                                                // 所以把 id 替换成 ID
+                                                UserModel *userModel = [UserModel modelWithDict:dict updateDict:@{@"ID":@"id"}];
+                                                
+                                                // 给下面的 NSLog 打个断点
+                                                // 从调试器里能看见上面的 tuccuay 模型已经转好了
+                                                NSLog(@"mew~");
+                                            }];
+    [task resume];
+}
+
+// MARK: 测试SEl-IMP-Method
+- (void)testSELIMPMEthod {
+    [self testOCSEL];
+    [self testOCIMP];
+    [self testMethod];
+}
+- (void)testOCSEL {
+    OC_SEL *oc_sel = [[OC_SEL alloc] init];
+    [oc_sel testSEL];
+}
+
+- (void)testOCIMP {
+    OC_IMP *oc_imp = [[OC_IMP alloc] init];
+    [oc_imp testIMP];
+}
+
+- (void)testMethod {
+    OC_Method *method = [[OC_Method alloc] init];
+    [method testMethod];
+    
+}
+
 @end
+
 
 
 
