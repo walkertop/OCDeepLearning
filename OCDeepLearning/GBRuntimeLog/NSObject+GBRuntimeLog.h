@@ -11,10 +11,10 @@
 @interface NSObject (GBRuntimeLog)
 
 + (NSArray *)classes;                               //获取当前类
-+ (NSArray *)properties;                            //获取所有属性
-+ (NSArray *)instanceVariables;                     //获取实例变量
-+ (NSArray *)classMethods;                          //获取类方法
-+ (NSArray *)instanceMethods;                       //获取实例方法
++ (NSArray *)properties;                            //获取所有属性    (获取属性)
++ (NSArray *)instanceVariables;                     //获取实例变量    (可以获取私有成员变量)
++ (NSArray *)classMethods;                          //获取类方法 (可以获取私有方法）
++ (NSArray *)instanceMethods;                       //获取实例方法  (可以获取私有方法）
 
 + (NSArray *)protocols;                             //获取协议
 + (NSDictionary *)descriptionForProtocol:(Protocol *)proto; //获取某个协议的描述

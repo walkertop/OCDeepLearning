@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
+#import "NSObject+GBRuntimeLog.h"
 #import "OCAutoReleasePool.h"
 #import "AClass.h"
 #import "GCDLearning.h"
@@ -19,6 +20,7 @@
 #import "OC_SEL.h"
 #import "OC_IMP.h"
 #import "OC_Method.h"
+#import "OC_AClass.h"
 
 @interface ViewController ()
 
@@ -37,8 +39,15 @@
 //    [self testKVC];
     
 //    [self testOCSEL];
-    [self testSELIMPMEthod];
+//    [self testSELIMPMEthod];
     
+ 
+//    [self testSynthesize];
+    
+//    NSArray *array = [UIView properties];
+//    NSArray *classMethod = [UIView classMethods];
+//    NSLog(@"%@",array);
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -123,6 +132,9 @@
 - (void)testOCSEL {
     OC_SEL *oc_sel = [[OC_SEL alloc] init];
     [oc_sel testSEL];
+
+    
+
 }
 
 - (void)testOCIMP {
@@ -134,6 +146,21 @@
     OC_Method *method = [[OC_Method alloc] init];
     [method testMethod];
     
+}
+
+
+// MARK: 测试RuntimeLog文件
+- (void)testRuntimeLog {
+    NSArray *propertiesArray = [OC_IMP properties];
+    NSArray *instanceVariablesArray = [OC_IMP instanceVariables];
+    NSArray *protocolsArray = [OC_IMP protocols];
+    NSLog(@"%@,%@,%@",propertiesArray,instanceVariablesArray,protocolsArray);
+}
+
+// MARK: synthesize
+- (void)testSynthesize {
+    OC_AClass *aClass = [[OC_AClass alloc] init];
+    [aClass testName];
 }
 
 @end

@@ -31,6 +31,7 @@
 		5D86904E1F18D6C600C269C8 /* OC_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86904D1F18D6C600C269C8 /* OC_Method.m */; };
 		5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */; };
 		5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */; };
+		5DF90FE71F1C5AF100B809C5 /* OC_AClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF90FE61F1C5AF100B809C5 /* OC_AClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+SwizzlingMethod.m"; sourceTree = "<group>"; };
 		5DF622D21F1620DD00D74036 /* NSObject+GBRuntimeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GBRuntimeLog.h"; sourceTree = "<group>"; };
 		5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GBRuntimeLog.m"; sourceTree = "<group>"; };
+		5DF90FE51F1C5AF100B809C5 /* OC_AClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OC_AClass.h; sourceTree = "<group>"; };
+		5DF90FE61F1C5AF100B809C5 /* OC_AClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OC_AClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +264,7 @@
 			children = (
 				5D5F4EB11F0F67BF000DE712 /* OCAutoReleasePool.h */,
 				5D5F4EB21F0F67BF000DE712 /* OCAutoReleasePool.m */,
+				5DE5C9671F1C6C05004B2A81 /* @synthesize */,
 			);
 			name = ARC;
 			sourceTree = "<group>";
@@ -289,6 +293,15 @@
 				5D45A2511F1769FD00D60780 /* BClass.m */,
 			);
 			name = TestLoad;
+			sourceTree = "<group>";
+		};
+		5DE5C9671F1C6C05004B2A81 /* @synthesize */ = {
+			isa = PBXGroup;
+			children = (
+				5DF90FE51F1C5AF100B809C5 /* OC_AClass.h */,
+				5DF90FE61F1C5AF100B809C5 /* OC_AClass.m */,
+			);
+			name = "@synthesize";
 			sourceTree = "<group>";
 		};
 		5DF622D11F1620DD00D74036 /* GBRuntimeLog */ = {
@@ -362,7 +375,7 @@
 		5D5F4E731F0F6786000DE712 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "walker彬";
 				TargetAttributes = {
 					5D5F4E7A1F0F6786000DE712 = {
@@ -438,6 +451,7 @@
 			files = (
 				5D45A25D1F1776F600D60780 /* Bird.m in Sources */,
 				5D45A2681F1782D200D60780 /* NSObject+MakeModel.m in Sources */,
+				5DF90FE71F1C5AF100B809C5 /* OC_AClass.m in Sources */,
 				5D45A2571F176C4000D60780 /* AClass.m in Sources */,
 				5D5F4EB31F0F67BF000DE712 /* OCAutoReleasePool.m in Sources */,
 				5D5F4E861F0F6786000DE712 /* ViewController.m in Sources */,
@@ -519,7 +533,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -527,7 +543,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -568,7 +588,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -576,7 +598,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
