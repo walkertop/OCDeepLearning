@@ -30,7 +30,6 @@
 
 ### ARC
 * 内部循环使用自动释放池
-*
 
 ### NSRunloop
 * 子线程的NSTimer和NSRunLoop
@@ -41,6 +40,7 @@
 只有手动开启子线程的NSRunLoop，
 并将NSTimer添加进去才可以运行。
 ```
+
 ### Runtime
  * [消息转发代码实现](https://github.com/walkertop/OCDeepLearning/blob/master/消息转发流程.md)  
 * `load` 和 `initialize`方法初探
