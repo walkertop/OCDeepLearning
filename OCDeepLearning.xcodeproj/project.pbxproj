@@ -29,6 +29,8 @@
 		5D8690471F18C3D800C269C8 /* OC_SEL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8690461F18C3D800C269C8 /* OC_SEL.m */; };
 		5D86904B1F18D6BB00C269C8 /* OC_IMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86904A1F18D6BB00C269C8 /* OC_IMP.m */; };
 		5D86904E1F18D6C600C269C8 /* OC_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86904D1F18D6C600C269C8 /* OC_Method.m */; };
+		5DBC6E0D1F26EB2F00E35AB3 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC6E0C1F26EB2F00E35AB3 /* NSObject+Extension.m */; };
+		5DD027891F25AA19005438B9 /* OCAutorelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD027881F25AA19005438B9 /* OCAutorelease.m */; };
 		5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */; };
 		5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */; };
 		5DF90FE71F1C5AF100B809C5 /* OC_AClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF90FE61F1C5AF100B809C5 /* OC_AClass.m */; };
@@ -96,6 +98,10 @@
 		5D86904D1F18D6C600C269C8 /* OC_Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OC_Method.m; sourceTree = "<group>"; };
 		5DAABF9C1F135DEF0089460B /* AClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AClass.h; sourceTree = "<group>"; };
 		5DAABF9D1F135DEF0089460B /* AClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AClass.m; sourceTree = "<group>"; };
+		5DBC6E0B1F26EB2F00E35AB3 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		5DBC6E0C1F26EB2F00E35AB3 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		5DD027871F25AA19005438B9 /* OCAutorelease.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAutorelease.h; sourceTree = "<group>"; };
+		5DD027881F25AA19005438B9 /* OCAutorelease.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAutorelease.m; sourceTree = "<group>"; };
 		5DF622CE1F161E5200D74036 /* ViewController+SwizzlingMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+SwizzlingMethod.h"; sourceTree = "<group>"; };
 		5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+SwizzlingMethod.m"; sourceTree = "<group>"; };
 		5DF622D21F1620DD00D74036 /* NSObject+GBRuntimeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GBRuntimeLog.h"; sourceTree = "<group>"; };
@@ -135,6 +141,8 @@
 				5DF622D11F1620DD00D74036 /* GBRuntimeLog */,
 				5DF622CE1F161E5200D74036 /* ViewController+SwizzlingMethod.h */,
 				5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */,
+				5DBC6E0B1F26EB2F00E35AB3 /* NSObject+Extension.h */,
+				5DBC6E0C1F26EB2F00E35AB3 /* NSObject+Extension.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -265,6 +273,8 @@
 				5D5F4EB11F0F67BF000DE712 /* OCAutoReleasePool.h */,
 				5D5F4EB21F0F67BF000DE712 /* OCAutoReleasePool.m */,
 				5DE5C9671F1C6C05004B2A81 /* @synthesize */,
+				5DD027871F25AA19005438B9 /* OCAutorelease.h */,
+				5DD027881F25AA19005438B9 /* OCAutorelease.m */,
 			);
 			name = ARC;
 			sourceTree = "<group>";
@@ -456,6 +466,8 @@
 				5D5F4EB31F0F67BF000DE712 /* OCAutoReleasePool.m in Sources */,
 				5D5F4E861F0F6786000DE712 /* ViewController.m in Sources */,
 				5D45A2551F176A6400D60780 /* Person.m in Sources */,
+				5DBC6E0D1F26EB2F00E35AB3 /* NSObject+Extension.m in Sources */,
+				5DD027891F25AA19005438B9 /* OCAutorelease.m in Sources */,
 				5D5F4EB61F0F7215000DE712 /* NSObject+Runtime.m in Sources */,
 				5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */,
 				5D86904B1F18D6BB00C269C8 /* OC_IMP.m in Sources */,

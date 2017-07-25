@@ -21,6 +21,8 @@
 #import "OC_IMP.h"
 #import "OC_Method.h"
 #import "OC_AClass.h"
+#import "NSObject+Extension.h"
+
 
 @interface ViewController ()
 
@@ -47,7 +49,7 @@
 //    NSArray *array = [UIView properties];
 //    NSArray *classMethod = [UIView classMethods];
 //    NSLog(@"%@",array);
-
+    [NSObject logRetainCount:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,6 +69,7 @@
     [testPool monitorAsyncAutoReleasePool];
     //开启子线程的runloop并将NSTimer事件添加进去才可以
     [testPool testTimerInAsync];
+
 }
 
 // MARK: 测试GCD
@@ -163,6 +166,19 @@
     [aClass testName];
 }
 
+// MARK: 测试引用计数器的原理:
+/*
+引用计数器底层是一个哈希散列表，以对象的内存地址作为key值，
+ */
+- (void)testRetainCount {
+    //    id arr = [NSArray arrayWithObject:@"123"];
+    //    NSDictionary *dic = @{@"name": @"zhangsan"};
+    //    id value = [NSObject valueForKey:dic.allKeys[0]];
+    //    NSHashTable
+    //    id value = [NSHashTable valueForKey:arr];
+    //    NSHashTable *hashTable = [NSHashTable]
+    //    NSLog(@"%@",value);
+}
 @end
 
 
