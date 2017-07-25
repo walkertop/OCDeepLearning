@@ -49,7 +49,8 @@
 //    NSArray *array = [UIView properties];
 //    NSArray *classMethod = [UIView classMethods];
 //    NSLog(@"%@",array);
-    [NSObject logRetainCount:self];
+//    [NSObject logRetainCount:self];   //类方法获取对象的引用计数retainCount
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -135,9 +136,6 @@
 - (void)testOCSEL {
     OC_SEL *oc_sel = [[OC_SEL alloc] init];
     [oc_sel testSEL];
-
-    
-
 }
 
 - (void)testOCIMP {
@@ -148,9 +146,18 @@
 - (void)testMethod {
     OC_Method *method = [[OC_Method alloc] init];
     [method testMethod];
-    
 }
 
+
+/**
+ 验证子类和父类里同一个selector，其IMP(函数指针)是否相同
+ */
+- (void)getIMPFromSelector {
+    IMP a = [self methodForSelector:@selector(setObject:forKey:)];
+    IMP b = [self.view methodForSelector:@selector(setValue:forKey:)];
+    NSLog(@"%p",a);
+    NSLog(@"%p",b);
+}
 
 // MARK: 测试RuntimeLog文件
 - (void)testRuntimeLog {
