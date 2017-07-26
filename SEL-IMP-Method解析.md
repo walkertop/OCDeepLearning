@@ -162,3 +162,8 @@ typedef void (^CustomBlock)(NSString *name);
 2017-07-14 20:14:26.359 OCDeepLearning[5654:530015] 执行block
 ```
 
+
+补充：
+1. 在swift里可以使用#selector(XXX)来获取对应的SEL,但这并非指swift的方法调用是通过selector来实现的，能调用仅仅是因为swift和OC的混编；
+2. 每个方法名有对应的唯一seletor,其SEL相同，但对应的IMP函数指针不同。
+
