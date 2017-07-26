@@ -16,6 +16,9 @@
 		5D45A2611F177CF600D60780 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D45A2601F177CF600D60780 /* Animal.m */; };
 		5D45A2651F17828A00D60780 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D45A2641F17828A00D60780 /* UserModel.m */; };
 		5D45A2681F1782D200D60780 /* NSObject+MakeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D45A2671F1782D200D60780 /* NSObject+MakeModel.m */; };
+		5D4B920A1F28A487004A242C /* LearnCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B92091F28A487004A242C /* LearnCategory.m */; };
+		5D4B920D1F28A4AB004A242C /* LearnCategory+Addtion1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B920C1F28A4AB004A242C /* LearnCategory+Addtion1.m */; };
+		5D4B92101F28A4B6004A242C /* LearnCategory+Addtion2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B920F1F28A4B6004A242C /* LearnCategory+Addtion2.m */; };
 		5D5F4E801F0F6786000DE712 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4E7F1F0F6786000DE712 /* main.m */; };
 		5D5F4E831F0F6786000DE712 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4E821F0F6786000DE712 /* AppDelegate.m */; };
 		5D5F4E861F0F6786000DE712 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4E851F0F6786000DE712 /* ViewController.m */; };
@@ -69,6 +72,12 @@
 		5D45A2641F17828A00D60780 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		5D45A2661F1782D200D60780 /* NSObject+MakeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MakeModel.h"; sourceTree = "<group>"; };
 		5D45A2671F1782D200D60780 /* NSObject+MakeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MakeModel.m"; sourceTree = "<group>"; };
+		5D4B92081F28A487004A242C /* LearnCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnCategory.h; sourceTree = "<group>"; };
+		5D4B92091F28A487004A242C /* LearnCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnCategory.m; sourceTree = "<group>"; };
+		5D4B920B1F28A4AB004A242C /* LearnCategory+Addtion1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearnCategory+Addtion1.h"; sourceTree = "<group>"; };
+		5D4B920C1F28A4AB004A242C /* LearnCategory+Addtion1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LearnCategory+Addtion1.m"; sourceTree = "<group>"; };
+		5D4B920E1F28A4B6004A242C /* LearnCategory+Addtion2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LearnCategory+Addtion2.h"; sourceTree = "<group>"; };
+		5D4B920F1F28A4B6004A242C /* LearnCategory+Addtion2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "LearnCategory+Addtion2.m"; sourceTree = "<group>"; };
 		5D5F4E7B1F0F6786000DE712 /* OCDeepLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCDeepLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5F4E7F1F0F6786000DE712 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D5F4E811F0F6786000DE712 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -135,7 +144,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D45A24B1F171EBB00D60780 /* Category */ = {
+		5D45A24B1F171EBB00D60780 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
 				5DF622D11F1620DD00D74036 /* GBRuntimeLog */,
@@ -144,7 +153,7 @@
 				5DBC6E0B1F26EB2F00E35AB3 /* NSObject+Extension.h */,
 				5DBC6E0C1F26EB2F00E35AB3 /* NSObject+Extension.m */,
 			);
-			name = Category;
+			name = Tools;
 			sourceTree = "<group>";
 		};
 		5D45A24D1F1763E600D60780 /* 消息转发流程 */ = {
@@ -203,9 +212,10 @@
 		5D5F4E7D1F0F6786000DE712 /* OCDeepLearning */ = {
 			isa = PBXGroup;
 			children = (
-				5D45A24B1F171EBB00D60780 /* Category */,
+				5D45A24B1F171EBB00D60780 /* Tools */,
 				5D5F4E841F0F6786000DE712 /* ViewController.h */,
 				5D5F4E851F0F6786000DE712 /* ViewController.m */,
+				5DF691F61F289D1F00487691 /* category */,
 				5D77E5771F14E2C5005A8459 /* ARC */,
 				5D77E5761F14E293005A8459 /* Runtime */,
 				5D77E5751F14E283005A8459 /* GCD */,
@@ -321,6 +331,19 @@
 				5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */,
 			);
 			path = GBRuntimeLog;
+			sourceTree = "<group>";
+		};
+		5DF691F61F289D1F00487691 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				5D4B92081F28A487004A242C /* LearnCategory.h */,
+				5D4B92091F28A487004A242C /* LearnCategory.m */,
+				5D4B920B1F28A4AB004A242C /* LearnCategory+Addtion1.h */,
+				5D4B920C1F28A4AB004A242C /* LearnCategory+Addtion1.m */,
+				5D4B920E1F28A4B6004A242C /* LearnCategory+Addtion2.h */,
+				5D4B920F1F28A4B6004A242C /* LearnCategory+Addtion2.m */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,12 +493,15 @@
 				5DD027891F25AA19005438B9 /* OCAutorelease.m in Sources */,
 				5D5F4EB61F0F7215000DE712 /* NSObject+Runtime.m in Sources */,
 				5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */,
+				5D4B92101F28A4B6004A242C /* LearnCategory+Addtion2.m in Sources */,
 				5D86904B1F18D6BB00C269C8 /* OC_IMP.m in Sources */,
+				5D4B920D1F28A4AB004A242C /* LearnCategory+Addtion1.m in Sources */,
 				5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */,
 				5D5F4E831F0F6786000DE712 /* AppDelegate.m in Sources */,
 				5D77E5741F14D9EE005A8459 /* GCDLearning.m in Sources */,
 				5D5F4E801F0F6786000DE712 /* main.m in Sources */,
 				5D45A2651F17828A00D60780 /* UserModel.m in Sources */,
+				5D4B920A1F28A487004A242C /* LearnCategory.m in Sources */,
 				5D45A2611F177CF600D60780 /* Animal.m in Sources */,
 				5D86904E1F18D6C600C269C8 /* OC_Method.m in Sources */,
 				5D45A25A1F17724600D60780 /* Person+ForwardMessage.m in Sources */,

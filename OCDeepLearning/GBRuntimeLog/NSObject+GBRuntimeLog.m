@@ -79,6 +79,16 @@ static void getSuper(Class class, NSMutableString *result) {
     return result.count ? [result copy] : nil;
 }
 
++ (NSArray *)methodLists {
+    NSMutableArray *methodListArray = [NSMutableArray array];
+    if ([self instanceMethods].count > 0) {
+        [methodListArray addObject:[self instanceMethods]];
+    }
+    if ([self classMethods].count > 0) {
+        [methodListArray addObject:[self classMethods]];
+    }
+    return methodListArray;
+}
 + (NSArray *)instanceVariables {
     unsigned int outCount;
     Ivar *ivars = class_copyIvarList([self class], &outCount);

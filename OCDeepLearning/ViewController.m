@@ -22,6 +22,7 @@
 #import "OC_Method.h"
 #import "OC_AClass.h"
 #import "NSObject+Extension.h"
+#import "LearnCategory.h"
 
 
 @interface ViewController ()
@@ -50,6 +51,8 @@
 //    NSArray *classMethod = [UIView classMethods];
 //    NSLog(@"%@",array);
 //    [NSObject logRetainCount:self];   //类方法获取对象的引用计数retainCount
+    
+    [self testLearnCategory];
 
 }
 
@@ -178,13 +181,23 @@
 引用计数器底层是一个哈希散列表，以对象的内存地址作为key值，
  */
 - (void)testRetainCount {
-    //    id arr = [NSArray arrayWithObject:@"123"];
+    //    id arr = [NSArzray arrayWithObject:@"123"];
     //    NSDictionary *dic = @{@"name": @"zhangsan"};
     //    id value = [NSObject valueForKey:dic.allKeys[0]];
     //    NSHashTable
     //    id value = [NSHashTable valueForKey:arr];
     //    NSHashTable *hashTable = [NSHashTable]
     //    NSLog(@"%@",value);
+}
+
+// MARK: 测试category
+- (void)testLearnCategory {
+    LearnCategory *cate = [[LearnCategory alloc] init];
+    [cate testCategory];        //调用分类方法
+    [LearnCategory useClassMethodInsteadOfCayegoryMethod:@selector(testCategory)];  //此时调用class里的方法
+    
+    NSLog(@"成员变量为%@",[LearnCategory instanceVariables]);//没有newName的成员变量，只有Class里定义names属性对应的_name的成员变量
+    NSLog(@"方法列表为%@",[LearnCategory methodLists]);      //分类里方法实现了不声明，也可以获取到
 }
 @end
 

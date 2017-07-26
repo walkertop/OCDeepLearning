@@ -10,6 +10,19 @@
 
 @interface NSObject (Extension)
 
+/**
+ 获取当前对象的引用计数retainCount
+ 
+ @param obj 当前对象obj
+ @return retainCount
+ */
 + (NSInteger)logRetainCount:(id) obj;
 
+
+/**
+ 不要分类的同名方法取代类里的方法
+
+ @param seletor 方法名
+ */
++ (void)useClassMethodInsteadOfCayegoryMethod: (SEL)seletor;
 @end
