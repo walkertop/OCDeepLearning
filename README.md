@@ -40,6 +40,7 @@
 只有手动开启子线程的NSRunLoop，
 并将NSTimer添加进去才可以运行。
 ```
+### [category的高级使用](https://github.com/walkertop/OCDeepLearning/blob/master/关于Categooey的详细说明.md)
 
 ### Runtime
  * [消息转发代码实现](https://github.com/walkertop/OCDeepLearning/blob/master/消息转发流程.md)  
