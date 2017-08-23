@@ -268,7 +268,7 @@
 		5D77E5761F14E293005A8459 /* Runtime */ = {
 			isa = PBXGroup;
 			children = (
-				5D8690481F18D69D00C269C8 /* Mrthod & SEL &IMP */,
+				5D8690481F18D69D00C269C8 /* Method & SEL &IMP */,
 				5D45A2621F17822B00D60780 /* 字典转模型 */,
 				5D45A25E1F177CD000D60780 /* 动态加载 */,
 				5D45A24D1F1763E600D60780 /* 消息转发流程 */,
@@ -289,7 +289,7 @@
 			name = ARC;
 			sourceTree = "<group>";
 		};
-		5D8690481F18D69D00C269C8 /* Mrthod & SEL &IMP */ = {
+		5D8690481F18D69D00C269C8 /* Method & SEL &IMP */ = {
 			isa = PBXGroup;
 			children = (
 				5D8690451F18C3D800C269C8 /* OC_SEL.h */,
@@ -299,7 +299,7 @@
 				5D86904C1F18D6C600C269C8 /* OC_Method.h */,
 				5D86904D1F18D6C600C269C8 /* OC_Method.m */,
 			);
-			name = "Mrthod & SEL &IMP";
+			name = "Method & SEL &IMP";
 			sourceTree = "<group>";
 		};
 		5DAABFA21F136B210089460B /* TestLoad */ = {
