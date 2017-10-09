@@ -147,7 +147,6 @@
     [method testMethod];
 }
 
-
 /**
  验证子类和父类里同一个selector，其IMP(函数指针)是否相同
  */
