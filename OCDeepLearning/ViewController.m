@@ -53,7 +53,6 @@
 //    [NSObject logRetainCount:self];   //类方法获取对象的引用计数retainCount
     
     [self testLearnCategory];
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,19 +67,16 @@
 //    [testPool createNumbersOfObjects];=
 //    //加入自动释放池
 //    [testPool createNumbersOfObjectsByautoReleasePool];
-    
     //检测异步线程自动释放池
     [testPool monitorAsyncAutoReleasePool];
     //开启子线程的runloop并将NSTimer事件添加进去才可以
     [testPool testTimerInAsync];
-
 }
 
 // MARK: 测试GCD
 - (void)testGCD {
     GCDLearning *gcd = [[GCDLearning alloc] init];
     [gcd testQueue];
-    
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [gcd testGroup];
     });
@@ -89,7 +85,6 @@
 // MARK: 消息转发
 - (void)testForwardingMethod {
     Person *person = [[Person alloc] init];
-    
     //实例方法
     [person run];       //  [person run]   等于  objc_msgSend(person,@selector(run))
     [person fly];
@@ -136,6 +131,7 @@
     [self testOCIMP];
     [self testMethod];
 }
+
 - (void)testOCSEL {
     OC_SEL *oc_sel = [[OC_SEL alloc] init];
     [oc_sel testSEL];
@@ -195,13 +191,8 @@
     LearnCategory *cate = [[LearnCategory alloc] init];
     [cate testCategory];        //调用分类方法
     [LearnCategory useClassMethodInsteadOfCayegoryMethod:@selector(testCategory)];  //此时调用class里的方法
-    
+
     NSLog(@"成员变量为%@",[LearnCategory instanceVariables]);//没有newName的成员变量，只有Class里定义names属性对应的_name的成员变量
     NSLog(@"方法列表为%@",[LearnCategory methodLists]);      //分类里方法实现了不声明，也可以获取到
 }
 @end
-
-
-
-
-
