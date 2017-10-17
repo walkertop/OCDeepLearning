@@ -24,7 +24,6 @@
 #import "NSObject+Extension.h"
 #import "LearnCategory.h"
 
-
 @interface ViewController ()
 
 @end
@@ -33,6 +32,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    APTBegin;
+//    APTBeginSection("test");
     // Do any additional setup after loading the view, typically from a nib.
 
 //    [self testAutoReleasePool];
@@ -53,6 +55,8 @@
 //    [NSObject logRetainCount:self];   //类方法获取对象的引用计数retainCount
     
     [self testLearnCategory];
+//    APTEndSection("test");
+//    APTEnd;
 }
 
 - (void)didReceiveMemoryWarning {

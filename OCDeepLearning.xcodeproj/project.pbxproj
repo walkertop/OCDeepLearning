@@ -34,6 +34,8 @@
 		5D86904E1F18D6C600C269C8 /* OC_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86904D1F18D6C600C269C8 /* OC_Method.m */; };
 		5DBC6E0D1F26EB2F00E35AB3 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC6E0C1F26EB2F00E35AB3 /* NSObject+Extension.m */; };
 		5DD027891F25AA19005438B9 /* OCAutorelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD027881F25AA19005438B9 /* OCAutorelease.m */; };
+		5DDAA1411F95AB9B00465EF0 /* appletrace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDAA13E1F95AB8000465EF0 /* appletrace.framework */; };
+		5DDAA1421F95ABA200465EF0 /* appletrace.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5DDAA13E1F95AB8000465EF0 /* appletrace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */; };
 		5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */; };
 		5DF90FE71F1C5AF100B809C5 /* OC_AClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF90FE61F1C5AF100B809C5 /* OC_AClass.m */; };
@@ -54,7 +56,34 @@
 			remoteGlobalIDString = 5D5F4E7A1F0F6786000DE712;
 			remoteInfo = OCDeepLearning;
 		};
+		5DDAA13D1F95AB8000465EF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DDAA1391F95AB8000465EF0 /* appletrace.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D17E997F1F72DF300034AAE7;
+			remoteInfo = appletrace;
+		};
+		5DDAA13F1F95AB9500465EF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DDAA1391F95AB8000465EF0 /* appletrace.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D17E997E1F72DF300034AAE7;
+			remoteInfo = appletrace;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5D56F8351F94696200250279 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5DDAA1421F95ABA200465EF0 /* appletrace.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5D45A24E1F1769D500D60780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,10 +136,14 @@
 		5D86904D1F18D6C600C269C8 /* OC_Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OC_Method.m; sourceTree = "<group>"; };
 		5DAABF9C1F135DEF0089460B /* AClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AClass.h; sourceTree = "<group>"; };
 		5DAABF9D1F135DEF0089460B /* AClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AClass.m; sourceTree = "<group>"; };
+		5DB8C1E41F94AC6B008D7FB3 /* appletrace.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = appletrace.mm; sourceTree = "<group>"; };
+		5DB8C1E51F94AC6B008D7FB3 /* appletrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = appletrace.h; sourceTree = "<group>"; };
+		5DB8C1E61F94AD6E008D7FB3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5DBC6E0B1F26EB2F00E35AB3 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
 		5DBC6E0C1F26EB2F00E35AB3 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		5DD027871F25AA19005438B9 /* OCAutorelease.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAutorelease.h; sourceTree = "<group>"; };
 		5DD027881F25AA19005438B9 /* OCAutorelease.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAutorelease.m; sourceTree = "<group>"; };
+		5DDAA1391F95AB8000465EF0 /* appletrace.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = appletrace.xcodeproj; path = ../../../../Desktop/AppleTrace/appletrace/appletrace.xcodeproj; sourceTree = "<group>"; };
 		5DF622CE1F161E5200D74036 /* ViewController+SwizzlingMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+SwizzlingMethod.h"; sourceTree = "<group>"; };
 		5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+SwizzlingMethod.m"; sourceTree = "<group>"; };
 		5DF622D21F1620DD00D74036 /* NSObject+GBRuntimeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GBRuntimeLog.h"; sourceTree = "<group>"; };
@@ -124,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DDAA1411F95AB9B00465EF0 /* appletrace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,13 +223,23 @@
 			name = "字典转模型";
 			sourceTree = "<group>";
 		};
+		5D56F8331F94695F00250279 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D5F4E721F0F6786000DE712 = {
 			isa = PBXGroup;
 			children = (
+				5DDAA1391F95AB8000465EF0 /* appletrace.xcodeproj */,
+				5DB8C1E61F94AD6E008D7FB3 /* PrefixHeader.pch */,
 				5D5F4E7D1F0F6786000DE712 /* OCDeepLearning */,
 				5D5F4E971F0F6786000DE712 /* OCDeepLearningTests */,
 				5D5F4EA21F0F6786000DE712 /* OCDeepLearningUITests */,
 				5D5F4E7C1F0F6786000DE712 /* Products */,
+				5D56F8331F94695F00250279 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +256,7 @@
 		5D5F4E7D1F0F6786000DE712 /* OCDeepLearning */ = {
 			isa = PBXGroup;
 			children = (
+				5DB8C1E31F94AC57008D7FB3 /* Monitor */,
 				5D45A24B1F171EBB00D60780 /* Tools */,
 				5D5F4E841F0F6786000DE712 /* ViewController.h */,
 				5D5F4E851F0F6786000DE712 /* ViewController.m */,
@@ -315,6 +360,23 @@
 			name = TestLoad;
 			sourceTree = "<group>";
 		};
+		5DB8C1E31F94AC57008D7FB3 /* Monitor */ = {
+			isa = PBXGroup;
+			children = (
+				5DB8C1E51F94AC6B008D7FB3 /* appletrace.h */,
+				5DB8C1E41F94AC6B008D7FB3 /* appletrace.mm */,
+			);
+			name = Monitor;
+			sourceTree = "<group>";
+		};
+		5DDAA13A1F95AB8000465EF0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DDAA13E1F95AB8000465EF0 /* appletrace.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		5DE5C9671F1C6C05004B2A81 /* @synthesize */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,10 +418,12 @@
 				5D5F4E771F0F6786000DE712 /* Sources */,
 				5D5F4E781F0F6786000DE712 /* Frameworks */,
 				5D5F4E791F0F6786000DE712 /* Resources */,
+				5D56F8351F94696200250279 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5DDAA1401F95AB9500465EF0 /* PBXTargetDependency */,
 			);
 			name = OCDeepLearning;
 			productName = OCDeepLearning;
@@ -413,7 +477,7 @@
 				TargetAttributes = {
 					5D5F4E7A1F0F6786000DE712 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = A9DWS95K67;
+						DevelopmentTeam = YWZ4KAZ3B5;
 						ProvisioningStyle = Automatic;
 					};
 					5D5F4E931F0F6786000DE712 = {
@@ -441,6 +505,12 @@
 			mainGroup = 5D5F4E721F0F6786000DE712;
 			productRefGroup = 5D5F4E7C1F0F6786000DE712 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5DDAA13A1F95AB8000465EF0 /* Products */;
+					ProjectRef = 5DDAA1391F95AB8000465EF0 /* appletrace.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5D5F4E7A1F0F6786000DE712 /* OCDeepLearning */,
@@ -449,6 +519,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5DDAA13E1F95AB8000465EF0 /* appletrace.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = appletrace.framework;
+			remoteRef = 5DDAA13D1F95AB8000465EF0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5D5F4E791F0F6786000DE712 /* Resources */ = {
@@ -538,6 +618,11 @@
 			isa = PBXTargetDependency;
 			target = 5D5F4E7A1F0F6786000DE712 /* OCDeepLearning */;
 			targetProxy = 5D5F4EA01F0F6786000DE712 /* PBXContainerItemProxy */;
+		};
+		5DDAA1401F95AB9500465EF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = appletrace;
+			targetProxy = 5DDAA13F1F95AB9500465EF0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -669,7 +754,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A9DWS95K67;
+				DEVELOPMENT_TEAM = YWZ4KAZ3B5;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = OCDeepLearning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sohu-inc.guobin.OCDeepLearning";
@@ -681,7 +769,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = A9DWS95K67;
+				DEVELOPMENT_TEAM = YWZ4KAZ3B5;
+				ENABLE_BITCODE = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/PrefixHeader.pch";
 				INFOPLIST_FILE = OCDeepLearning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sohu-inc.guobin.OCDeepLearning";
