@@ -34,8 +34,6 @@
 		5D86904E1F18D6C600C269C8 /* OC_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86904D1F18D6C600C269C8 /* OC_Method.m */; };
 		5DBC6E0D1F26EB2F00E35AB3 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC6E0C1F26EB2F00E35AB3 /* NSObject+Extension.m */; };
 		5DD027891F25AA19005438B9 /* OCAutorelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD027881F25AA19005438B9 /* OCAutorelease.m */; };
-		5DDAA1411F95AB9B00465EF0 /* appletrace.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DDAA13E1F95AB8000465EF0 /* appletrace.framework */; };
-		5DDAA1421F95ABA200465EF0 /* appletrace.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5DDAA13E1F95AB8000465EF0 /* appletrace.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */; };
 		5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */; };
 		5DF90FE71F1C5AF100B809C5 /* OC_AClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF90FE61F1C5AF100B809C5 /* OC_AClass.m */; };
@@ -56,20 +54,6 @@
 			remoteGlobalIDString = 5D5F4E7A1F0F6786000DE712;
 			remoteInfo = OCDeepLearning;
 		};
-		5DDAA13D1F95AB8000465EF0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DDAA1391F95AB8000465EF0 /* appletrace.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D17E997F1F72DF300034AAE7;
-			remoteInfo = appletrace;
-		};
-		5DDAA13F1F95AB9500465EF0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5DDAA1391F95AB8000465EF0 /* appletrace.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = D17E997E1F72DF300034AAE7;
-			remoteInfo = appletrace;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -79,7 +63,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				5DDAA1421F95ABA200465EF0 /* appletrace.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +126,6 @@
 		5DBC6E0C1F26EB2F00E35AB3 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
 		5DD027871F25AA19005438B9 /* OCAutorelease.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAutorelease.h; sourceTree = "<group>"; };
 		5DD027881F25AA19005438B9 /* OCAutorelease.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAutorelease.m; sourceTree = "<group>"; };
-		5DDAA1391F95AB8000465EF0 /* appletrace.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = appletrace.xcodeproj; path = ../../../../Desktop/AppleTrace/appletrace/appletrace.xcodeproj; sourceTree = "<group>"; };
 		5DF622CE1F161E5200D74036 /* ViewController+SwizzlingMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+SwizzlingMethod.h"; sourceTree = "<group>"; };
 		5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+SwizzlingMethod.m"; sourceTree = "<group>"; };
 		5DF622D21F1620DD00D74036 /* NSObject+GBRuntimeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GBRuntimeLog.h"; sourceTree = "<group>"; };
@@ -157,7 +139,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DDAA1411F95AB9B00465EF0 /* appletrace.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +214,6 @@
 		5D5F4E721F0F6786000DE712 = {
 			isa = PBXGroup;
 			children = (
-				5DDAA1391F95AB8000465EF0 /* appletrace.xcodeproj */,
 				5DB8C1E61F94AD6E008D7FB3 /* PrefixHeader.pch */,
 				5D5F4E7D1F0F6786000DE712 /* OCDeepLearning */,
 				5D5F4E971F0F6786000DE712 /* OCDeepLearningTests */,
@@ -369,14 +349,6 @@
 			name = Monitor;
 			sourceTree = "<group>";
 		};
-		5DDAA13A1F95AB8000465EF0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5DDAA13E1F95AB8000465EF0 /* appletrace.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5DE5C9671F1C6C05004B2A81 /* @synthesize */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,7 +395,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5DDAA1401F95AB9500465EF0 /* PBXTargetDependency */,
 			);
 			name = OCDeepLearning;
 			productName = OCDeepLearning;
@@ -505,12 +476,6 @@
 			mainGroup = 5D5F4E721F0F6786000DE712;
 			productRefGroup = 5D5F4E7C1F0F6786000DE712 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5DDAA13A1F95AB8000465EF0 /* Products */;
-					ProjectRef = 5DDAA1391F95AB8000465EF0 /* appletrace.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5D5F4E7A1F0F6786000DE712 /* OCDeepLearning */,
@@ -519,16 +484,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5DDAA13E1F95AB8000465EF0 /* appletrace.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = appletrace.framework;
-			remoteRef = 5DDAA13D1F95AB8000465EF0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5D5F4E791F0F6786000DE712 /* Resources */ = {
@@ -618,11 +573,6 @@
 			isa = PBXTargetDependency;
 			target = 5D5F4E7A1F0F6786000DE712 /* OCDeepLearning */;
 			targetProxy = 5D5F4EA01F0F6786000DE712 /* PBXContainerItemProxy */;
-		};
-		5DDAA1401F95AB9500465EF0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = appletrace;
-			targetProxy = 5DDAA13F1F95AB9500465EF0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

@@ -37,7 +37,7 @@
 //    APTBeginSection("test");
     // Do any additional setup after loading the view, typically from a nib.
 
-//    [self testAutoReleasePool];
+    [self testAutoReleasePool];
 //    [self testGCD];
 //    [self testForwardingMethod];
 //    [self testResolveInstanceMethod];
@@ -54,7 +54,7 @@
 //    NSLog(@"%@",array);
 //    [NSObject logRetainCount:self];   //类方法获取对象的引用计数retainCount
     
-    [self testLearnCategory];
+//    [self testLearnCategory];
 //    APTEndSection("test");
 //    APTEnd;
 }
