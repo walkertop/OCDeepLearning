@@ -23,6 +23,8 @@
 #import "OC_AClass.h"
 #import "NSObject+Extension.h"
 #import "LearnCategory.h"
+#import "OCDLLayer.h"
+#import "OCDLView.h"
 
 @interface ViewController ()
 
@@ -68,13 +70,13 @@
 - (void)testAutoReleasePool {
     OCAutoReleasePool *testPool = [[OCAutoReleasePool alloc] init];
     //没有加入自动释放池
-//    [testPool createNumbersOfObjects];=
+    [testPool createNumbersOfObjects];
 //    //加入自动释放池
-//    [testPool createNumbersOfObjectsByautoReleasePool];
+    [testPool createNumbersOfObjectsByautoReleasePool];
     //检测异步线程自动释放池
-    [testPool monitorAsyncAutoReleasePool];
+//    [testPool monitorAsyncAutoReleasePool];
     //开启子线程的runloop并将NSTimer事件添加进去才可以
-    [testPool testTimerInAsync];
+//    [testPool testTimerInAsync];
 }
 
 // MARK: 测试GCD
@@ -201,4 +203,13 @@
     NSLog(@"成员变量为%@",[LearnCategory instanceVariables]);//没有newName的成员变量，只有Class里定义names属性对应的_name的成员变量
     NSLog(@"方法列表为%@",[LearnCategory methodLists]);      //分类里方法实现了不声明，也可以获取到
 }
+
+- (void)testView {
+    OCDLView *aView = [[OCDLView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    aView.backgroundColor = [UIColor redColor];
+    
+    [self.view addSubview:aView];
+}
+
+
 @end

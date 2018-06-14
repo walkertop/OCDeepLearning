@@ -1,3 +1,4 @@
+
 //
 //  OCAutoReleasePool.m
 //  OCDeepLearning
@@ -15,19 +16,31 @@
  为了对比   使用自动释放池对循环创建对象的影响
  */
 - (void)createNumbersOfObjects {        //未使用自动释放池，创建循环变量
-    for (int i = 0; i <= 10000; i++) {
+    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
+    
+    for (int i = 0; i <= 100000; i++) {
         NSArray *array = [NSArray arrayWithObjects:@"1",@"2", nil];
         NSLog(@"%@",array);
     }
+    
+    CFAbsoluteTime end = CFAbsoluteTimeGetCurrent();
+    NSLog(@"没有使用自动释放的耗时%f", end - start);
+
+
 }
 
 - (void)createNumbersOfObjectsByautoReleasePool {
+    
+    CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
     @autoreleasepool {
-        for (int i = 0; i <= 10000; i++) {
+        for (int i = 0; i <= 100000; i++) {
             NSArray *array = [NSArray arrayWithObjects:@"1",@"2", nil];
             NSLog(@"%@",array);
         }
     }
+    CFAbsoluteTime end = CFAbsoluteTimeGetCurrent();
+    NSLog(@"使用自动释放的耗时%f", end - start);
+
 }
 
 // TODO: - 待完成
