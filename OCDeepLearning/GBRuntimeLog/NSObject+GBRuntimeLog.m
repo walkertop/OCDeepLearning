@@ -89,6 +89,7 @@ static void getSuper(Class class, NSMutableString *result) {
     }
     return methodListArray;
 }
+
 + (NSArray *)instanceVariables {
     unsigned int outCount;
     Ivar *ivars = class_copyIvarList([self class], &outCount);
