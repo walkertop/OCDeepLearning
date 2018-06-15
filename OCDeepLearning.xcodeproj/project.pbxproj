@@ -34,6 +34,11 @@
 		5D8690471F18C3D800C269C8 /* OC_SEL.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8690461F18C3D800C269C8 /* OC_SEL.m */; };
 		5D86904B1F18D6BB00C269C8 /* OC_IMP.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86904A1F18D6BB00C269C8 /* OC_IMP.m */; };
 		5D86904E1F18D6C600C269C8 /* OC_Method.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D86904D1F18D6C600C269C8 /* OC_Method.m */; };
+		5D899E7220D3AEB100552152 /* OCBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D899E7120D3AEB100552152 /* OCBaseTableViewController.m */; };
+		5D899E7520D3AEC000552152 /* OCBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D899E7420D3AEC000552152 /* OCBaseTableViewCell.m */; };
+		5D899E7820D3B12300552152 /* OCBaseTableViewCell+ConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D899E7720D3B12300552152 /* OCBaseTableViewCell+ConfigModel.m */; };
+		5D899E7B20D3B1B900552152 /* OCBaseCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D899E7A20D3B1B900552152 /* OCBaseCellModel.m */; };
+		5D899E7F20D3B4F600552152 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D899E7E20D3B4F600552152 /* MainViewController.m */; };
 		5DBC6E0D1F26EB2F00E35AB3 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC6E0C1F26EB2F00E35AB3 /* NSObject+Extension.m */; };
 		5DC2A35120B3EEF300565281 /* OCDLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2A35020B3EEF300565281 /* OCDLView.m */; };
 		5DC2A35420B3EF1500565281 /* OCDLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2A35320B3EF1500565281 /* OCDLLayer.m */; };
@@ -125,6 +130,16 @@
 		5D86904A1F18D6BB00C269C8 /* OC_IMP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OC_IMP.m; sourceTree = "<group>"; };
 		5D86904C1F18D6C600C269C8 /* OC_Method.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OC_Method.h; sourceTree = "<group>"; };
 		5D86904D1F18D6C600C269C8 /* OC_Method.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OC_Method.m; sourceTree = "<group>"; };
+		5D899E7020D3AEB100552152 /* OCBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCBaseTableViewController.h; sourceTree = "<group>"; };
+		5D899E7120D3AEB100552152 /* OCBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCBaseTableViewController.m; sourceTree = "<group>"; };
+		5D899E7320D3AEC000552152 /* OCBaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCBaseTableViewCell.h; sourceTree = "<group>"; };
+		5D899E7420D3AEC000552152 /* OCBaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCBaseTableViewCell.m; sourceTree = "<group>"; };
+		5D899E7620D3B12300552152 /* OCBaseTableViewCell+ConfigModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCBaseTableViewCell+ConfigModel.h"; sourceTree = "<group>"; };
+		5D899E7720D3B12300552152 /* OCBaseTableViewCell+ConfigModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "OCBaseTableViewCell+ConfigModel.m"; sourceTree = "<group>"; };
+		5D899E7920D3B1B900552152 /* OCBaseCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCBaseCellModel.h; sourceTree = "<group>"; };
+		5D899E7A20D3B1B900552152 /* OCBaseCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCBaseCellModel.m; sourceTree = "<group>"; };
+		5D899E7D20D3B4F600552152 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5D899E7E20D3B4F600552152 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5DAABF9C1F135DEF0089460B /* AClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AClass.h; sourceTree = "<group>"; };
 		5DAABF9D1F135DEF0089460B /* AClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AClass.m; sourceTree = "<group>"; };
 		5DB8C1E41F94AC6B008D7FB3 /* appletrace.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = appletrace.mm; sourceTree = "<group>"; };
@@ -248,6 +263,8 @@
 		5D5F4E7D1F0F6786000DE712 /* OCDeepLearning */ = {
 			isa = PBXGroup;
 			children = (
+				5D899E7C20D3B4D300552152 /* FIrstPage */,
+				5D899E6F20D3AE9400552152 /* TableVIeVC */,
 				5DB8C1E31F94AC57008D7FB3 /* Monitor */,
 				5D45A24B1F171EBB00D60780 /* Tools */,
 				5D5F4E841F0F6786000DE712 /* ViewController.h */,
@@ -345,6 +362,30 @@
 				5D86904D1F18D6C600C269C8 /* OC_Method.m */,
 			);
 			name = "Mrthod & SEL &IMP";
+			sourceTree = "<group>";
+		};
+		5D899E6F20D3AE9400552152 /* TableVIeVC */ = {
+			isa = PBXGroup;
+			children = (
+				5D899E7920D3B1B900552152 /* OCBaseCellModel.h */,
+				5D899E7A20D3B1B900552152 /* OCBaseCellModel.m */,
+				5D899E7620D3B12300552152 /* OCBaseTableViewCell+ConfigModel.h */,
+				5D899E7720D3B12300552152 /* OCBaseTableViewCell+ConfigModel.m */,
+				5D899E7020D3AEB100552152 /* OCBaseTableViewController.h */,
+				5D899E7120D3AEB100552152 /* OCBaseTableViewController.m */,
+				5D899E7320D3AEC000552152 /* OCBaseTableViewCell.h */,
+				5D899E7420D3AEC000552152 /* OCBaseTableViewCell.m */,
+			);
+			name = TableVIeVC;
+			sourceTree = "<group>";
+		};
+		5D899E7C20D3B4D300552152 /* FIrstPage */ = {
+			isa = PBXGroup;
+			children = (
+				5D899E7D20D3B4F600552152 /* MainViewController.h */,
+				5D899E7E20D3B4F600552152 /* MainViewController.m */,
+			);
+			name = FIrstPage;
 			sourceTree = "<group>";
 		};
 		5DAABFA21F136B210089460B /* TestLoad */ = {
@@ -539,13 +580,17 @@
 			files = (
 				5D45A25D1F1776F600D60780 /* Bird.m in Sources */,
 				5D45A2681F1782D200D60780 /* NSObject+MakeModel.m in Sources */,
+				5D899E7B20D3B1B900552152 /* OCBaseCellModel.m in Sources */,
+				5D899E7220D3AEB100552152 /* OCBaseTableViewController.m in Sources */,
 				5DC2A35120B3EEF300565281 /* OCDLView.m in Sources */,
 				5DF90FE71F1C5AF100B809C5 /* OC_AClass.m in Sources */,
 				5D45A2571F176C4000D60780 /* AClass.m in Sources */,
+				5D899E7F20D3B4F600552152 /* MainViewController.m in Sources */,
 				5D5F4EB31F0F67BF000DE712 /* OCAutoReleasePool.m in Sources */,
 				5D5F4E861F0F6786000DE712 /* ViewController.m in Sources */,
 				5D45A2551F176A6400D60780 /* Person.m in Sources */,
 				5DBC6E0D1F26EB2F00E35AB3 /* NSObject+Extension.m in Sources */,
+				5D899E7520D3AEC000552152 /* OCBaseTableViewCell.m in Sources */,
 				5DD027891F25AA19005438B9 /* OCAutorelease.m in Sources */,
 				5D5F4EB61F0F7215000DE712 /* NSObject+Runtime.m in Sources */,
 				5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */,
@@ -561,6 +606,7 @@
 				5D4B920A1F28A487004A242C /* LearnCategory.m in Sources */,
 				5D71C43920C66BDD00EDD506 /* TestViewController.m in Sources */,
 				5D45A2611F177CF600D60780 /* Animal.m in Sources */,
+				5D899E7820D3B12300552152 /* OCBaseTableViewCell+ConfigModel.m in Sources */,
 				5D86904E1F18D6C600C269C8 /* OC_Method.m in Sources */,
 				5D45A25A1F17724600D60780 /* Person+ForwardMessage.m in Sources */,
 				5DC2A35420B3EF1500565281 /* OCDLLayer.m in Sources */,

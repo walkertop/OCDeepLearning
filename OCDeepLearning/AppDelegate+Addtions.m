@@ -8,6 +8,8 @@
 
 #import "AppDelegate+Addtions.h"
 #import "TestViewController.h"
+#import "OCBaseTableViewController.h"
+#import "MainViewController.h"
 
 @implementation AppDelegate (Addtions)
 
@@ -16,12 +18,12 @@
 - (void)setupRootVC {
     UITabBarController *tabbarVC = [[UITabBarController alloc] init];
     
-    UIViewController *firstVC = [[UIViewController alloc] init];
+    MainViewController *firstVC = [[MainViewController alloc] init];
     firstVC.view.backgroundColor = [UIColor grayColor];
     firstVC.title = @"第一页";
     
     
-    UITableViewController *secondTableVC = [[UITableViewController alloc] initWithStyle:UITableViewStylePlain];
+    UITableViewController *secondTableVC = [[OCBaseTableViewController alloc] initWithStyle:UITableViewStylePlain];
     secondTableVC.title = @"第二页";
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabbarVC];
