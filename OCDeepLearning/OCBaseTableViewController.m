@@ -10,6 +10,7 @@
 #import "OCBaseTableViewCell.h"
 #import "OCBaseTableViewCell+ConfigModel.h"
 #import "OCBaseCellModel.h"
+#import "StudentDataManager.h"
 
 static NSString* const kBaseIdentifier = @"baseIdentifier";
 
@@ -27,7 +28,6 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
     
     [self.tableView registerClass:[OCBaseTableViewCell class] forCellReuseIdentifier:kBaseIdentifier];
 }
@@ -68,6 +68,11 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
 }
 
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [[StudentDataManager shareInstance] saveData];
+
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
