@@ -39,6 +39,9 @@
 		5D899E7820D3B12300552152 /* OCBaseTableViewCell+ConfigModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D899E7720D3B12300552152 /* OCBaseTableViewCell+ConfigModel.m */; };
 		5D899E7B20D3B1B900552152 /* OCBaseCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D899E7A20D3B1B900552152 /* OCBaseCellModel.m */; };
 		5D899E7F20D3B4F600552152 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D899E7E20D3B4F600552152 /* MainViewController.m */; };
+		5D9393A420DB999500A61440 /* OCDeepLearningModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D9393A220DB999500A61440 /* OCDeepLearningModel.xcdatamodeld */; };
+		5D9393B520DB9BE000A61440 /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9393B220DB9BE000A61440 /* Student+CoreDataClass.m */; };
+		5D9393B620DB9BE000A61440 /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9393B420DB9BE000A61440 /* Student+CoreDataProperties.m */; };
 		5DBC6E0D1F26EB2F00E35AB3 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBC6E0C1F26EB2F00E35AB3 /* NSObject+Extension.m */; };
 		5DC2A35120B3EEF300565281 /* OCDLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2A35020B3EEF300565281 /* OCDLView.m */; };
 		5DC2A35420B3EF1500565281 /* OCDLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2A35320B3EF1500565281 /* OCDLLayer.m */; };
@@ -140,6 +143,11 @@
 		5D899E7A20D3B1B900552152 /* OCBaseCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCBaseCellModel.m; sourceTree = "<group>"; };
 		5D899E7D20D3B4F600552152 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5D899E7E20D3B4F600552152 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5D9393A320DB999500A61440 /* OCDeepLearningModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OCDeepLearningModel.xcdatamodel; sourceTree = "<group>"; };
+		5D9393B120DB9BE000A61440 /* Student+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataClass.h"; sourceTree = "<group>"; };
+		5D9393B220DB9BE000A61440 /* Student+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataClass.m"; sourceTree = "<group>"; };
+		5D9393B320DB9BE000A61440 /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5D9393B420DB9BE000A61440 /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataProperties.m"; sourceTree = "<group>"; };
 		5DAABF9C1F135DEF0089460B /* AClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AClass.h; sourceTree = "<group>"; };
 		5DAABF9D1F135DEF0089460B /* AClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AClass.m; sourceTree = "<group>"; };
 		5DB8C1E41F94AC6B008D7FB3 /* appletrace.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = appletrace.mm; sourceTree = "<group>"; };
@@ -275,6 +283,7 @@
 				5D77E5771F14E2C5005A8459 /* ARC */,
 				5D77E5761F14E293005A8459 /* Runtime */,
 				5D77E5751F14E283005A8459 /* GCD */,
+				5D9393A120DB997900A61440 /* DB */,
 				5D5F4E7E1F0F6786000DE712 /* Supporting Files */,
 				5DC2A34F20B3EEF300565281 /* OCDLView.h */,
 				5DC2A35020B3EEF300565281 /* OCDLView.m */,
@@ -386,6 +395,18 @@
 				5D899E7E20D3B4F600552152 /* MainViewController.m */,
 			);
 			name = FIrstPage;
+			sourceTree = "<group>";
+		};
+		5D9393A120DB997900A61440 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				5D9393B120DB9BE000A61440 /* Student+CoreDataClass.h */,
+				5D9393B220DB9BE000A61440 /* Student+CoreDataClass.m */,
+				5D9393B320DB9BE000A61440 /* Student+CoreDataProperties.h */,
+				5D9393B420DB9BE000A61440 /* Student+CoreDataProperties.m */,
+				5D9393A220DB999500A61440 /* OCDeepLearningModel.xcdatamodeld */,
+			);
+			name = DB;
 			sourceTree = "<group>";
 		};
 		5DAABFA21F136B210089460B /* TestLoad */ = {
@@ -510,6 +531,7 @@
 					5D5F4E7A1F0F6786000DE712 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = YWZ4KAZ3B5;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					5D5F4E931F0F6786000DE712 = {
@@ -596,12 +618,14 @@
 				5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */,
 				5D4B92101F28A4B6004A242C /* LearnCategory+Addtion2.m in Sources */,
 				5D86904B1F18D6BB00C269C8 /* OC_IMP.m in Sources */,
+				5D9393A420DB999500A61440 /* OCDeepLearningModel.xcdatamodeld in Sources */,
 				5D4B920D1F28A4AB004A242C /* LearnCategory+Addtion1.m in Sources */,
 				5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */,
 				5D5F4E831F0F6786000DE712 /* AppDelegate.m in Sources */,
 				5D77E5741F14D9EE005A8459 /* GCDLearning.m in Sources */,
 				5D71C43620C6689800EDD506 /* AppDelegate+Addtions.m in Sources */,
 				5D5F4E801F0F6786000DE712 /* main.m in Sources */,
+				5D9393B520DB9BE000A61440 /* Student+CoreDataClass.m in Sources */,
 				5D45A2651F17828A00D60780 /* UserModel.m in Sources */,
 				5D4B920A1F28A487004A242C /* LearnCategory.m in Sources */,
 				5D71C43920C66BDD00EDD506 /* TestViewController.m in Sources */,
@@ -610,6 +634,7 @@
 				5D86904E1F18D6C600C269C8 /* OC_Method.m in Sources */,
 				5D45A25A1F17724600D60780 /* Person+ForwardMessage.m in Sources */,
 				5DC2A35420B3EF1500565281 /* OCDLLayer.m in Sources */,
+				5D9393B620DB9BE000A61440 /* Student+CoreDataProperties.m in Sources */,
 				5D8690471F18C3D800C269C8 /* OC_SEL.m in Sources */,
 				5D45A2521F1769FD00D60780 /* BClass.m in Sources */,
 			);
@@ -774,6 +799,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = YWZ4KAZ3B5;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -782,6 +808,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sohu-inc.guobin.OCDeepLearning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OCDeepLearning/OCDeepLearning-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -789,6 +818,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = YWZ4KAZ3B5;
 				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -797,6 +827,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sohu-inc.guobin.OCDeepLearning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OCDeepLearning/OCDeepLearning-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -890,6 +922,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5D9393A220DB999500A61440 /* OCDeepLearningModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5D9393A320DB999500A61440 /* OCDeepLearningModel.xcdatamodel */,
+			);
+			currentVersion = 5D9393A320DB999500A61440 /* OCDeepLearningModel.xcdatamodel */;
+			path = OCDeepLearningModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5D5F4E731F0F6786000DE712 /* Project object */;
 }
