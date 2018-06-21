@@ -11,9 +11,14 @@
 #import "OCBaseTableViewController.h"
 #import "MainViewController.h"
 
+//@interface AppDelegate (Addtions)
+//
+//@property (nonatomic, readwrite, strong) NSManagedObjectModel *managedObjectModel;
+//
+//@end
+
+
 @implementation AppDelegate (Addtions)
-
-
 
 - (void)setupRootVC {
     UITabBarController *tabbarVC = [[UITabBarController alloc] init];
@@ -39,4 +44,6 @@
     
     [self.window makeKeyAndVisible];
 }
+
+
 @end

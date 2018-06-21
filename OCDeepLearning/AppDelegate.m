@@ -8,8 +8,13 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Addtions.h"
+#import <CoreData/CoreData.h>
+
 
 @interface AppDelegate ()
+
+@property(nonatomic, strong) NSManagedObjectModel *managedObjectModel;
+@property(nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @end
 
@@ -50,6 +55,35 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+
+#pragma mark - privete method
+
+- (NSManagedObjectModel *)managedObjectModel {
+    if (!_managedObjectModel) {
+        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"OCDeepLearningModel" withExtension:@"momd"];
+        _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
+    }
+    return _managedObjectModel;
+}
+
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
+    if (!_persistentStoreCoordinator) {
+        _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
+        
+        NSURL *urlString = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
+        NSURL *sqliteURL = [urlString URLByAppendingPathComponent:@"OCDeepLearningModel.sqlite"];
+        NSError *error;
+        [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqliteURL options:nil error:&error];
+        if (error) {
+            NSLog(@"数据库存储失败，原因为 %@",error.localizedDescription);
+        }
+    }
+    return _persistentStoreCoordinator;
+}
+
 
 
 @end

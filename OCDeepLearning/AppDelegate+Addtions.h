@@ -12,4 +12,6 @@
 
 
 - (void)setupRootVC;
+
+- (void)configCoreData;
 @end
