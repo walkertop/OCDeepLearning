@@ -1,5 +1,5 @@
 //
-//  Student+CoreDataClass.m
+//  Grade+CoreDataClass.m
 //  OCDeepLearning
 //
 //  Created by walker on 2018/6/22.
@@ -7,8 +7,8 @@
 //
 //
 
-#import "Student+CoreDataClass.h"
+#import "Grade+CoreDataClass.h"
 
-@implementation Student
+@implementation Grade
 
 @end

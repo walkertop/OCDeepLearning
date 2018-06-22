@@ -15,6 +15,7 @@
 static NSString* const kBaseIdentifier = @"baseIdentifier";
 
 @interface OCBaseTableViewController ()
+@property(nonatomic, strong) NSArray *DBActionArray;
 
 @end
 
@@ -30,6 +31,7 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [self.tableView registerClass:[OCBaseTableViewCell class] forCellReuseIdentifier:kBaseIdentifier];
+    self.DBActionArray = @[@"增加单条数据",@"增加多条数据",@"删除单条数据",@"删除多条数据",@"更改单条数据",@"更改多条数据",@"查询单条数据",@"查询多条数据"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +46,7 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return self.DBActionArray.count;
 }
 
 
@@ -60,7 +62,7 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
     // Configure the cell...
     OCBaseCellModel *baseModel = [[OCBaseCellModel alloc] init];
     baseModel.btnName = @"按钮";
-    baseModel.labelName = @"文本";
+    baseModel.labelName = self.DBActionArray[indexPath.row];
     
     [cell configureDataForCell:baseModel];
 
@@ -70,7 +72,30 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    [[StudentDataManager shareInstance] saveData];
+    if (indexPath.row == 0) {
+        [[StudentDataManager shareInstance] saveSingleData];
+    }
+    if (indexPath.row == 1) {
+        [[StudentDataManager shareInstance] saveMassData];
+    }
+    if (indexPath.row == 2) {
+        [[StudentDataManager shareInstance] deleteSingleData];
+    }
+    if (indexPath.row == 3) {
+        [[StudentDataManager shareInstance] deleteMassData];
+    }
+    if (indexPath.row == 4) {
+        [[StudentDataManager shareInstance] updateSingleData];
+    }
+    if (indexPath.row == 5) {
+        [[StudentDataManager shareInstance] updateMassData];
+    }
+    if (indexPath.row == 6) {
+        [[StudentDataManager shareInstance] fetchSingleData];
+    }
+    if (indexPath.row == 7) {
+        [[StudentDataManager shareInstance] fetchMassData];
+    }
 
 }
 /*

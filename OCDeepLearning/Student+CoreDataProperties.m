@@ -2,7 +2,7 @@
 //  Student+CoreDataProperties.m
 //  OCDeepLearning
 //
-//  Created by walker on 2018/6/21.
+//  Created by walker on 2018/6/22.
 //  Copyright © 2018年 walker彬. All rights reserved.
 //
 //
@@ -19,5 +19,7 @@
 @dynamic age;
 @dynamic gender;
 @dynamic score;
+@dynamic gradeStudent;
+@dynamic courseStudent;
 
 @end

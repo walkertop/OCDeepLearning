@@ -30,7 +30,6 @@
     [self.view addSubview:baseTableVC.tableView];
     [self.view addSubview:secondVc.view];
     
-    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1114" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Class" representedClassName="Class" syncable="YES" codeGenerationType="class">
+        <attribute name="classID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="classStudent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="studentClass" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
+        <attribute name="chaperCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="courseID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="courseStudent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="studentCourse" inverseEntity="Student" syncable="YES"/>
+    </entity>
     <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="gender" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="studentClass" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Class" inverseName="classStudent" inverseEntity="Class" syncable="YES"/>
+        <relationship name="studentCourse" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="courseStudent" inverseEntity="Course" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Student" positionX="-45" positionY="0" width="128" height="103"/>
+        <element name="Student" positionX="-45" positionY="0" width="128" height="133"/>
+        <element name="Class" positionX="-18" positionY="54" width="128" height="90"/>
+        <element name="Course" positionX="9" positionY="63" width="128" height="105"/>
     </elements>
 </model>

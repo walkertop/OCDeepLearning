@@ -9,6 +9,7 @@
 #import "StudentDataManager.h"
 #import "Student+CoreDataClass.h"
 #import <CoreData/CoreData.h>
+#import <CoreData/NSPersistentStoreRequest.h>
 
 static StudentDataManager  *sharedInstance = nil;
 
@@ -46,7 +47,9 @@ static StudentDataManager  *sharedInstance = nil;
 //    return sharedInstance;
 //}
 
-- (void)saveData {
+
+#pragma mark - 增加数据
+- (void)saveSingleData {
     Student *student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:self.coreDataContext];
     student.name = @"张三";
     student.gender = YES;
@@ -55,19 +58,99 @@ static StudentDataManager  *sharedInstance = nil;
     
     NSError *error;
     [self.coreDataContext save:&error];
+}
+
+- (void)saveMassData {
+    for (int i = 0;i < 100; i++) {
+        Student *student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:self.coreDataContext];
+        student.name = [NSString stringWithFormat:@"student-%d", i];;
+        student.age = i;
+        student.score = i;
+    }
+    NSError *error;
+    [self.coreDataContext save:&error];
+}
+
+#pragma mark - 删除数据
+- (void)deleteSingleData {
+    
+//    for (Student *student in students) {
+//        [self.coreDataContext deleteObject:student];
+//    }
+//    [self.coreDataContext save:nil]; // 最后不要忘了调用 save 使操作生效。
+}
+
+- (void)deleteMassData {
+    NSFetchRequest *deleteFetch = [Student fetchRequest];
+    
+    deleteFetch.predicate = [NSPredicate predicateWithFormat:@"age >= %@", @(50)];
+    
+    NSBatchDeleteRequest *deleteRequest = [[NSBatchDeleteRequest alloc] initWithFetchRequest:deleteFetch];
+    deleteRequest.resultType = NSBatchDeleteResultTypeObjectIDs;
+    
+    NSBatchDeleteResult *deleteResult = [self.coreDataContext executeRequest:deleteRequest error:nil];
+    NSArray<NSManagedObjectID *> *deletedObjectIDs = deleteResult.result;
+    
+    NSDictionary *deletedDict = @{NSDeletedObjectsKey : deletedObjectIDs};
+    [NSManagedObjectContext mergeChangesFromRemoteContextSave:deletedDict intoContexts:@[self.coreDataContext]];
     
 }
 
+#pragma mark - 更改数据
+- (void)updateSingleData {
+    
+}
 
--(NSManagedObjectModel *)coreDataModel
-{
+- (void)updateMassData {
+    
+    // 根据 entityName 创建
+    NSBatchUpdateRequest *updateRequest = [[NSBatchUpdateRequest alloc] initWithEntityName:@"Student"];
+    updateRequest.predicate = [NSPredicate predicateWithFormat:@"age == %@", @(20)];
+    updateRequest.propertiesToUpdate = @{@"name" : @"newName"};
+    updateRequest.resultType = NSUpdatedObjectIDsResultType;
+    NSError *error;
+    NSBatchUpdateResult *updateResult = [self.coreDataContext executeRequest:updateRequest error:&error];
+    NSArray<NSManagedObjectID *> *updatedObjectIDs = updateResult.result;
+    NSLog(@"更改之后的结果为%@",updatedObjectIDs);
+    
+    NSDictionary *updatedDict = @{NSUpdatedObjectsKey : updatedObjectIDs};
+    [NSManagedObjectContext mergeChangesFromRemoteContextSave:updatedDict intoContexts:@[self.coreDataContext]];
+}
+
+#pragma mark - 查询数据
+- (void)fetchSingleData {
+    NSFetchRequest *fetchRequest = [Student fetchRequest];
+    
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"age > %@", @(20)];
+    
+    NSArray<NSSortDescriptor *>*sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"age" ascending:YES]];
+    fetchRequest.sortDescriptors = sortDescriptors;
+    NSArray<Student *> *students = [self.coreDataContext executeRequest:fetchRequest error:nil];
+    NSLog(@"查询的结果是%@",students);
+}
+
+
+
+- (void)fetchMassData {
+    NSFetchRequest *fetchRequest = [Student fetchRequest];
+    
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"age > %@", @(20)];
+    
+    NSArray<NSSortDescriptor *>*sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"age" ascending:YES]];
+    fetchRequest.sortDescriptors = sortDescriptors;
+    NSArray<Student *> *students = [self.coreDataContext executeRequest:fetchRequest error:nil];
+    NSLog(@"查询的结果是%@",students);
+}
+
+#pragma mark - lazy
+- (NSManagedObjectModel *)coreDataModel {
     if (!_coreDataModel) {
         _coreDataModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"OCDeepLearningModel" withExtension:@"momd"]];
     }
     return _coreDataModel;
 }
--(NSPersistentStoreCoordinator *)coreDataPersistent
-{
+
+- (NSPersistentStoreCoordinator *)coreDataPersistent {
     if (!_coreDataPersistent) {
         _coreDataPersistent = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self coreDataModel]];
         NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) lastObject];
@@ -82,8 +165,7 @@ static StudentDataManager  *sharedInstance = nil;
     return _coreDataPersistent ;
 }
 
--(NSManagedObjectContext *)coreDataContext
-{
+- (NSManagedObjectContext *)coreDataContext {
     if(!_coreDataContext)
     {
         _coreDataContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
@@ -91,6 +173,5 @@ static StudentDataManager  *sharedInstance = nil;
     }
     return _coreDataContext;
 }
-
 
 @end

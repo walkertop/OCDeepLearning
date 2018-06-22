@@ -1,5 +1,5 @@
 //
-//  Student+CoreDataClass.h
+//  Grade+CoreDataClass.h
 //  OCDeepLearning
 //
 //  Created by walker on 2018/6/22.
@@ -10,14 +10,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Course, Grade;
+@class Student;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Student : NSManagedObject
+@interface Grade : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "Student+CoreDataProperties.h"
+#import "Grade+CoreDataProperties.h"

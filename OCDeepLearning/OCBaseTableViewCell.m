@@ -34,7 +34,7 @@
     [self.contentView addSubview:self.customBtn];
     
     self.customLabel = [[UILabel alloc] init];
-    self.customLabel.frame = CGRectMake(100, 20, 200, 40);
+    self.customLabel.frame = CGRectMake(100, 0, 200, 40);
     
     [self.contentView addSubview:self.customLabel];
 }

@@ -2,7 +2,7 @@
 //  Student+CoreDataProperties.h
 //  OCDeepLearning
 //
-//  Created by walker on 2018/6/21.
+//  Created by walker on 2018/6/22.
 //  Copyright © 2018年 walker彬. All rights reserved.
 //
 //
@@ -19,7 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nonatomic) int16_t age;
 @property (nonatomic) BOOL gender;
-@property (nonatomic) int32_t score;
+@property (nonatomic) int16_t score;
+@property (nullable, nonatomic, retain) Grade *gradeStudent;
+@property (nullable, nonatomic, retain) Course *courseStudent;
 
 @end
 
