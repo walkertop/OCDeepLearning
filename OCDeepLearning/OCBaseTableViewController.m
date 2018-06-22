@@ -46,6 +46,8 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+//    return [[StudentDataManager shareInstance] fetchMassData];
     return self.DBActionArray.count;
 }
 
@@ -62,7 +64,11 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
     // Configure the cell...
     OCBaseCellModel *baseModel = [[OCBaseCellModel alloc] init];
     baseModel.btnName = @"按钮";
-    baseModel.labelName = self.DBActionArray[indexPath.row];
+    if (indexPath.row < 8) {
+        baseModel.labelName = self.DBActionArray[indexPath.row];
+    } else {
+        baseModel.labelName = @"越界";
+    }
     
     [cell configureDataForCell:baseModel];
 
@@ -96,6 +102,7 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
     if (indexPath.row == 7) {
         [[StudentDataManager shareInstance] fetchMassData];
     }
+    
 
 }
 /*

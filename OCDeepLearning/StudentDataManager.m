@@ -61,6 +61,9 @@ static StudentDataManager  *sharedInstance = nil;
     
     NSError *error;
     [self.coreDataContext save:&error];
+    if (![self.coreDataContext save:&error]) {
+        NSLog(@"不能保存，原因是%@",error.localizedDescription);
+    }
 }
 
 - (void)saveMassData {
@@ -72,6 +75,9 @@ static StudentDataManager  *sharedInstance = nil;
     }
     NSError *error;
     [self.coreDataContext save:&error];
+    if (![self.coreDataContext save:&error]) {
+        NSLog(@"不能保存，原因是%@",error.localizedDescription);
+    }
 }
 
 #pragma mark - 删除数据
@@ -123,26 +129,27 @@ static StudentDataManager  *sharedInstance = nil;
 #pragma mark - 查询数据
 - (void)fetchSingleData {
     NSFetchRequest *fetchRequest = [Student fetchRequest];
-    
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"age > %@", @(20)];
-    
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"age > %@", @(90)];
+    fetchRequest.fetchLimit = 8;
     NSArray<NSSortDescriptor *>*sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"age" ascending:YES]];
     fetchRequest.sortDescriptors = sortDescriptors;
-    NSArray<Student *> *students = [self.coreDataContext executeRequest:fetchRequest error:nil];
+    NSArray<Student *> *students = [self.coreDataContext executeFetchRequest:fetchRequest error:nil];
     NSLog(@"查询的结果是%@",students);
 }
 
-
-
-- (void)fetchMassData {
+- (NSInteger )fetchMassData {
     NSFetchRequest *fetchRequest = [Student fetchRequest];
     
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"age > %@", @(20)];
-    
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"age > %@", @(90)];
+//    fetchRequest.fetchLimit = 8;
+
     NSArray<NSSortDescriptor *>*sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"age" ascending:YES]];
     fetchRequest.sortDescriptors = sortDescriptors;
-    NSArray<Student *> *students = [self.coreDataContext executeRequest:fetchRequest error:nil];
+    NSArray<Student *> *students = [self.coreDataContext executeFetchRequest:fetchRequest error:nil];
     NSLog(@"查询的结果是%@",students);
+    
+    return [students count];
+    
 }
 
 #pragma mark - lazy
@@ -160,7 +167,12 @@ static StudentDataManager  *sharedInstance = nil;
         NSURL * pathURL = [NSURL  fileURLWithPath:[path stringByAppendingString:@"OCDeepLearning.sqlite" ]];
         NSLog(@"路径%@",pathURL);
         NSError * error = nil;
-        NSPersistentStore * store = [ _coreDataPersistent  addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:pathURL options:nil error:&error] ;
+        
+        NSDictionary *optionsDict = [NSDictionary dictionary];
+        [optionsDict setValue:[NSNumber numberWithBool:YES] forKey:NSMigratePersistentStoresAutomaticallyOption];
+        [optionsDict setValue:[NSNumber numberWithBool:YES] forKey:NSInferMappingModelAutomaticallyOption];
+        
+        NSPersistentStore *store = [_coreDataPersistent  addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:pathURL options:optionsDict error:&error];
         if (!store) {
             [NSException raise:@"add database error" format:@"%@" ,[error localizedDescription]];
         }

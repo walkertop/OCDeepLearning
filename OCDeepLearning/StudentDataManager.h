@@ -22,7 +22,7 @@
 - (void)updateMassData;
 
 - (void)fetchSingleData;
-- (void)fetchMassData;
+- (NSInteger)fetchMassData;
 
 
 @end
