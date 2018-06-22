@@ -8,6 +8,9 @@
 
 #import "StudentDataManager.h"
 #import "Student+CoreDataClass.h"
+#import "Grade+CoreDataClass.h"
+#import "Course+CoreDataClass.h"
+
 #import <CoreData/CoreData.h>
 #import <CoreData/NSPersistentStoreRequest.h>
 
@@ -145,7 +148,7 @@ static StudentDataManager  *sharedInstance = nil;
 #pragma mark - lazy
 - (NSManagedObjectModel *)coreDataModel {
     if (!_coreDataModel) {
-        _coreDataModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"OCDeepLearningModel" withExtension:@"momd"]];
+        _coreDataModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"OCDeepLearning" withExtension:@"momd"]];
     }
     return _coreDataModel;
 }
@@ -154,7 +157,7 @@ static StudentDataManager  *sharedInstance = nil;
     if (!_coreDataPersistent) {
         _coreDataPersistent = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self coreDataModel]];
         NSString * path = [NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES) lastObject];
-        NSURL * pathURL = [NSURL  fileURLWithPath:[path stringByAppendingString:@"OCDeepLearningModel.sqlite" ]];
+        NSURL * pathURL = [NSURL  fileURLWithPath:[path stringByAppendingString:@"OCDeepLearning.sqlite" ]];
         NSLog(@"路径%@",pathURL);
         NSError * error = nil;
         NSPersistentStore * store = [ _coreDataPersistent  addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:pathURL options:nil error:&error] ;
@@ -173,5 +176,16 @@ static StudentDataManager  *sharedInstance = nil;
     }
     return _coreDataContext;
 }
+
+#pragma mark - 关联属性
+- (void)addCoursePropertyForStudent {
+    Student *student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:self.coreDataContext];
+    Grade *grade = [[Grade alloc] initWithContext:self.coreDataContext];
+    grade.gradeName = @"初一";
+    grade.gradeID = @"7";
+    student.gradeStudent = grade;
+    [self.coreDataContext save:nil];
+}
+
 
 @end

@@ -63,7 +63,7 @@
 
 //- (NSManagedObjectModel *)managedObjectModel {
 //    if (!_managedObjectModel) {
-//        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"OCDeepLearningModel" withExtension:@"momd"];
+//        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"OCDeepLearning" withExtension:@"momd"];
 //        _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
 //    }
 //    return _managedObjectModel;
@@ -74,7 +74,7 @@
 //        _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
 //
 //        NSURL *urlString = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
-//        NSURL *sqliteURL = [urlString URLByAppendingPathComponent:@"OCDeepLearningModel.sqlite"];
+//        NSURL *sqliteURL = [urlString URLByAppendingPathComponent:@"OCDeepLearning.sqlite"];
 //        NSError *error;
 //        [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqliteURL options:nil error:&error];
 //        if (error) {
