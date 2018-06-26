@@ -10,6 +10,7 @@
 #import "TestViewController.h"
 #import "OCBaseTableViewController.h"
 #import "MainViewController.h"
+#import "ThirdViewController.h"
 
 //@interface AppDelegate (Addtions)
 //
@@ -38,7 +39,10 @@
     testVC.navigationController.title = @"TEST";
     tabbarVC.navigationController.title = @"dsd";
     
-    tabbarVC.viewControllers = @[firstVC,secondTableVC,testVC];
+    ThirdViewController *thirdVC = [[ThirdViewController alloc] init];
+    thirdVC.title = @"第三页";
+    
+    tabbarVC.viewControllers = @[firstVC,secondTableVC,thirdVC,testVC];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = nav;
     
