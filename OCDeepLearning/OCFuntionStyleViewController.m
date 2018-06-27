@@ -10,6 +10,8 @@
  */
 
 #import "OCFuntionStyleViewController.h"
+#import "CTMediator.h"
+#import "data"
 
 static NSString* const kFuntionStyle = @"funtionStyle";
 
@@ -76,6 +78,10 @@ static NSString* const kFuntionStyle = @"funtionStyle";
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 4) {
+
+//        [CTMediator sharedInstance] performTarget:<#(NSString *)#> action:<#(NSString *)#> params:<#(NSDictionary *)#> shouldCacheTarget:<#(BOOL)#>
+    }
    
 }
 

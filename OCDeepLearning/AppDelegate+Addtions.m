@@ -35,7 +35,7 @@
     
     OCFuntionStyleViewController *funtionStyleVC = [[OCFuntionStyleViewController alloc] init];
     funtionStyleVC.title = @"功能";
-    
+
     TestViewController *testVC = [[TestViewController alloc] init];
     testVC.title = @"Test";
     testVC.navigationController.title = @"TEST";
