@@ -11,7 +11,7 @@
 #import "OCBaseTableViewController.h"
 #import "MainViewController.h"
 #import "ThirdViewController.h"
-
+#import "OCFuntionStyleViewController.h"
 //@interface AppDelegate (Addtions)
 //
 //@property (nonatomic, readwrite, strong) NSManagedObjectModel *managedObjectModel;
@@ -23,16 +23,18 @@
 
 - (void)setupRootVC {
     UITabBarController *tabbarVC = [[UITabBarController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabbarVC];
     
     MainViewController *firstVC = [[MainViewController alloc] init];
     firstVC.view.backgroundColor = [UIColor grayColor];
     firstVC.title = @"第一页";
     
     
-    UITableViewController *secondTableVC = [[OCBaseTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    secondTableVC.title = @"第二页";
+//    UITableViewController *secondTableVC = [[OCBaseTableViewController alloc] initWithStyle:UITableViewStylePlain];
+//    secondTableVC.title = @"第二页";
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabbarVC];
+    OCFuntionStyleViewController *funtionStyleVC = [[OCFuntionStyleViewController alloc] init];
+    funtionStyleVC.title = @"功能";
     
     TestViewController *testVC = [[TestViewController alloc] init];
     testVC.title = @"Test";
@@ -42,10 +44,10 @@
     ThirdViewController *thirdVC = [[ThirdViewController alloc] init];
     thirdVC.title = @"第三页";
     
-    tabbarVC.viewControllers = @[firstVC,secondTableVC,thirdVC,testVC];
+    tabbarVC.viewControllers = @[firstVC,funtionStyleVC,thirdVC,testVC];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = nav;
-    
     [self.window makeKeyAndVisible];
 }
 

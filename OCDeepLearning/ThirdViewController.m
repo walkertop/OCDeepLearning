@@ -56,9 +56,9 @@ static NSString* const kCustomIdentifier = @"customIdentifier";
 }
 
 #pragma mark - UITableViewDelegate,UITableViewDataSource
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    return 1;
-//}
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;

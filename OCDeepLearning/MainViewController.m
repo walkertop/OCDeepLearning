@@ -19,15 +19,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    OCBaseTableViewController *baseTableVC = [[OCBaseTableViewController alloc] init];
-    
-    [self addChildViewController:baseTableVC];
-    baseTableVC.tableView.frame = CGRectMake(0, 100, 300, 300);
+//    OCBaseTableViewController *baseTableVC = [[OCBaseTableViewController alloc] init];
+//
+//    [self addChildViewController:baseTableVC];
+//    baseTableVC.tableView.frame = CGRectMake(0, 100, 300, 300);
+    //    [self.view addSubview:baseTableVC.tableView];
     
     UIViewController *secondVc = [[UIViewController alloc] init];
     secondVc.view.backgroundColor = [UIColor orangeColor];
     secondVc.view.frame = CGRectMake(0, 410, 300, 300);
-    [self.view addSubview:baseTableVC.tableView];
     [self.view addSubview:secondVc.view];
     
 }
