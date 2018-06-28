@@ -91,10 +91,12 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 // MARK: 测试GCD
 - (void)testGCD {
     GCDLearning *gcd = [[GCDLearning alloc] init];
-    [gcd testQueue];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [gcd testGroup];
-    });
+    
+    [gcd testBarrier];
+//    [gcd testQueue];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [gcd testGroup];
+//    });
 }
 
 // MARK: 消息转发
@@ -250,7 +252,7 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 100, 30)];
-    label.text = @"数据库储存";
+    label.text = @"测试功能list";
     return label;
 }
 
@@ -259,9 +261,45 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 4) {
+    if (indexPath.row == 0) {
+        [self testAutoReleasePool];
+
+    } else if (indexPath.row == 1) {
+        [self testGCD];
+    } else if (indexPath.row == 2) {
+        [self testKVC];
+    } else if (indexPath.row == 3) {
+        [self testOCSEL];
+    } else if (indexPath.row == 4) {
+        [self testLearnCategory];
+    } else if (indexPath.row == 5) {
+        [self testRetainCount];
+    } else if (indexPath.row == 6) {
+        [self testForwardingMethod];
+    } else if (indexPath.row == 7) {
+        [self testSELIMPMEthod];
     }
     
+    
+    //    [self testGCD];
+    //    [self testForwardingMethod];
+    //    [self testResolveInstanceMethod];
+    //    [self testKVC];
+    
+    //    [self testOCSEL];
+    //    [self testSELIMPMEthod];
+    
+    
+    //    [self testSynthesize];
+    
+    //    NSArray *array = [UIView properties];
+    //    NSArray *classMethod = [UIView classMethods];
+    //    NSLog(@"%@",array);
+    //    [NSObject logRetainCount:self];   //类方法获取对象的引用计数retainCount
+    
+    //    [self testLearnCategory];
+    //    APTEndSection("test");
+    //    APTEnd;
 }
 
 

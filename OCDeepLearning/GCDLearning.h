@@ -11,4 +11,9 @@
 @interface GCDLearning : NSObject
 - (void)testQueue;  
 - (void)testGroup;
+
+- (void)testBarrier;
+- (void)testWait;
+- (void)testSyncMain;
+
 @end
