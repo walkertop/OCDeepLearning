@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D035D2420E489EB004C77E4 /* OCSaveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D035D2320E489EB004C77E4 /* OCSaveManager.m */; };
 		5D374E3420E39AE4002C89AE /* OCSaveDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D374E3320E39AE4002C89AE /* OCSaveDataTableViewController.m */; };
 		5D374E3720E39D4F002C89AE /* OCFuntionStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D374E3620E39D4F002C89AE /* OCFuntionStyleViewController.m */; };
 		5D45A24F1F1769D500D60780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D45A24E1F1769D500D60780 /* Assets.xcassets */; };
@@ -89,6 +90,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D035D2220E489EB004C77E4 /* OCSaveManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSaveManager.h; sourceTree = "<group>"; };
+		5D035D2320E489EB004C77E4 /* OCSaveManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCSaveManager.m; sourceTree = "<group>"; };
 		5D374E3220E39AE4002C89AE /* OCSaveDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSaveDataTableViewController.h; sourceTree = "<group>"; };
 		5D374E3320E39AE4002C89AE /* OCSaveDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCSaveDataTableViewController.m; sourceTree = "<group>"; };
 		5D374E3520E39D4F002C89AE /* OCFuntionStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCFuntionStyleViewController.h; sourceTree = "<group>"; };
@@ -438,6 +441,8 @@
 				5D9393B820DBB13000A61440 /* StudentDataManager.h */,
 				5D9393B920DBB13000A61440 /* StudentDataManager.m */,
 				5DB7EF8220DCCEA00030A648 /* OCDeepLearning.xcdatamodeld */,
+				5D035D2220E489EB004C77E4 /* OCSaveManager.h */,
+				5D035D2320E489EB004C77E4 /* OCSaveManager.m */,
 			);
 			name = DB;
 			sourceTree = "<group>";
@@ -711,6 +716,7 @@
 				5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */,
 				5D4B92101F28A4B6004A242C /* LearnCategory+Addtion2.m in Sources */,
 				5D86904B1F18D6BB00C269C8 /* OC_IMP.m in Sources */,
+				5D035D2420E489EB004C77E4 /* OCSaveManager.m in Sources */,
 				5D4B920D1F28A4AB004A242C /* LearnCategory+Addtion1.m in Sources */,
 				5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */,
 				5D5F4E831F0F6786000DE712 /* AppDelegate.m in Sources */,
