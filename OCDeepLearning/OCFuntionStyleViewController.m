@@ -11,7 +11,7 @@
 
 #import "OCFuntionStyleViewController.h"
 #import "CTMediator.h"
-#import "data"
+
 
 static NSString* const kFuntionStyle = @"funtionStyle";
 
