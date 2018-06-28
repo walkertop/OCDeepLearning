@@ -29,9 +29,9 @@
     
 //    MainViewController *firstVC = [[MainViewController alloc] init];
 //    firstVC.view.backgroundColor = [UIColor grayColor];
-    firstVC.title = @"测试list";
     
     ViewController *firstVC = [[ViewController alloc] init];
+    firstVC.title = @"测试list";
     
 //    UITableViewController *secondTableVC = [[OCBaseTableViewController alloc] initWithStyle:UITableViewStylePlain];
 //    secondTableVC.title = @"第二页";
