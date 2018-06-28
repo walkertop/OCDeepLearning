@@ -12,6 +12,8 @@
 #import "MainViewController.h"
 #import "ThirdViewController.h"
 #import "OCFuntionStyleViewController.h"
+#import "ViewController.h"
+
 //@interface AppDelegate (Addtions)
 //
 //@property (nonatomic, readwrite, strong) NSManagedObjectModel *managedObjectModel;
@@ -25,10 +27,11 @@
     UITabBarController *tabbarVC = [[UITabBarController alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tabbarVC];
     
-    MainViewController *firstVC = [[MainViewController alloc] init];
-    firstVC.view.backgroundColor = [UIColor grayColor];
-    firstVC.title = @"第一页";
+//    MainViewController *firstVC = [[MainViewController alloc] init];
+//    firstVC.view.backgroundColor = [UIColor grayColor];
+    firstVC.title = @"测试list";
     
+    ViewController *firstVC = [[ViewController alloc] init];
     
 //    UITableViewController *secondTableVC = [[OCBaseTableViewController alloc] initWithStyle:UITableViewStylePlain];
 //    secondTableVC.title = @"第二页";

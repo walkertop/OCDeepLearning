@@ -47,7 +47,7 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-//    return [[StudentDataManager shareInstance] fetchMassData];
+//    return [[StudentDataManager sharedInstance] fetchMassData];
     return self.DBActionArray.count;
 }
 
@@ -79,28 +79,28 @@ static NSString* const kBaseIdentifier = @"baseIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row == 0) {
-        [[StudentDataManager shareInstance] saveSingleData];
+        [[StudentDataManager sharedInstance] saveSingleData];
     }
     if (indexPath.row == 1) {
-        [[StudentDataManager shareInstance] saveMassData];
+        [[StudentDataManager sharedInstance] saveMassData];
     }
     if (indexPath.row == 2) {
-        [[StudentDataManager shareInstance] deleteSingleData];
+        [[StudentDataManager sharedInstance] deleteSingleData];
     }
     if (indexPath.row == 3) {
-        [[StudentDataManager shareInstance] deleteMassData];
+        [[StudentDataManager sharedInstance] deleteMassData];
     }
     if (indexPath.row == 4) {
-        [[StudentDataManager shareInstance] updateSingleData];
+        [[StudentDataManager sharedInstance] updateSingleData];
     }
     if (indexPath.row == 5) {
-        [[StudentDataManager shareInstance] updateMassData];
+        [[StudentDataManager sharedInstance] updateMassData];
     }
     if (indexPath.row == 6) {
-        [[StudentDataManager shareInstance] fetchSingleData];
+        [[StudentDataManager sharedInstance] fetchSingleData];
     }
     if (indexPath.row == 7) {
-        [[StudentDataManager shareInstance] fetchMassData];
+        [[StudentDataManager sharedInstance] fetchMassData];
     }
     
 

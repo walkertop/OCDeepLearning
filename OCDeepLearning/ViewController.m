@@ -26,7 +26,13 @@
 #import "OCDLLayer.h"
 #import "OCDLView.h"
 
-@interface ViewController ()
+
+static NSString  *const kFuntionListOfViewController = @"funtionListOfViewController";
+
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property(nonatomic, strong) UITableView *funtionStyleTableView;
+@property(nonatomic, strong) NSArray *funtionStyleArray;
 
 @end
 
@@ -35,11 +41,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method"];
+    [self.funtionStyleTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kFuntionListOfViewController];
+    [self.view addSubview:self.funtionStyleTableView];
 //    APTBegin;
 //    APTBeginSection("test");
     // Do any additional setup after loading the view, typically from a nib.
 
-    [self testAutoReleasePool];
+//    [self testAutoReleasePool];
 //    [self testGCD];
 //    [self testForwardingMethod];
 //    [self testResolveInstanceMethod];
@@ -209,6 +218,50 @@
     aView.backgroundColor = [UIColor redColor];
     
     [self.view addSubview:aView];
+}
+
+#pragma mark - lazy
+- (UITableView *)funtionStyleTableView {
+    if (!_funtionStyleTableView) {
+        _funtionStyleTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _funtionStyleTableView.delegate = self;
+        _funtionStyleTableView.dataSource = self;
+    }
+    return _funtionStyleTableView;
+}
+
+#pragma mark - UITableViewDelegate,UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.funtionStyleArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kFuntionListOfViewController forIndexPath:indexPath];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kFuntionListOfViewController];
+    }
+    cell.textLabel.text = self.funtionStyleArray[indexPath.row];
+    return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, 100, 30)];
+    label.text = @"数据库储存";
+    return label;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 50;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 4) {
+    }
+    
 }
 
 

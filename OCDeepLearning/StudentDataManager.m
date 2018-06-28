@@ -28,12 +28,12 @@ static StudentDataManager  *sharedInstance = nil;
 
 @implementation StudentDataManager
 
-+ (instancetype)shareInstance {
++ (instancetype)sharedInstance {
 //    static StudentDataManager  *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (!sharedInstance) {
-            sharedInstance = [[self alloc] init];
+            sharedInstance = [[StudentDataManager alloc] init];
         }
     });
 

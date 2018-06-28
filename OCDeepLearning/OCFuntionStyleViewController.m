@@ -15,8 +15,6 @@
 
 static NSString* const kFuntionStyle = @"funtionStyle";
 
-
-
 @interface OCFuntionStyleViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic, strong) UITableView *funtionStyleTableView;
 @property(nonatomic, strong) NSArray *funtionStyleArray;

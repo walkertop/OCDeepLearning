@@ -10,6 +10,6 @@
 
 @interface OCSaveManager : NSObject
 
-- (instancetype)sharedInstance;
++ (instancetype)sharedInstance;
 
 @end

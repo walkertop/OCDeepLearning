@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface StudentDataManager : NSObject
-+ (instancetype)shareInstance;
++ (instancetype)sharedInstance;
 
 //数据库操作的增删改查——(CRUD)
 - (void)saveSingleData;

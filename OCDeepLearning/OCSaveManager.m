@@ -24,11 +24,11 @@ typedef NS_ENUM(NSInteger, OCSaveStyle) {
 @implementation OCSaveManager
 
 
-- (instancetype)sharedInstance {
++ (instancetype)sharedInstance {
     static OCSaveManager  *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[OCSaveManager alloc] init];
+        sharedInstance = [[self alloc] init];
     });
     
     return sharedInstance;

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D035D2420E489EB004C77E4 /* OCSaveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D035D2320E489EB004C77E4 /* OCSaveManager.m */; };
+		5D035D2720E4BE0A004C77E4 /* OCBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D035D2620E4BE0A004C77E4 /* OCBaseManager.m */; };
 		5D374E3420E39AE4002C89AE /* OCSaveDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D374E3320E39AE4002C89AE /* OCSaveDataTableViewController.m */; };
 		5D374E3720E39D4F002C89AE /* OCFuntionStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D374E3620E39D4F002C89AE /* OCFuntionStyleViewController.m */; };
 		5D45A24F1F1769D500D60780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D45A24E1F1769D500D60780 /* Assets.xcassets */; };
@@ -92,6 +93,8 @@
 /* Begin PBXFileReference section */
 		5D035D2220E489EB004C77E4 /* OCSaveManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSaveManager.h; sourceTree = "<group>"; };
 		5D035D2320E489EB004C77E4 /* OCSaveManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCSaveManager.m; sourceTree = "<group>"; };
+		5D035D2520E4BE0A004C77E4 /* OCBaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCBaseManager.h; sourceTree = "<group>"; };
+		5D035D2620E4BE0A004C77E4 /* OCBaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCBaseManager.m; sourceTree = "<group>"; };
 		5D374E3220E39AE4002C89AE /* OCSaveDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSaveDataTableViewController.h; sourceTree = "<group>"; };
 		5D374E3320E39AE4002C89AE /* OCSaveDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCSaveDataTableViewController.m; sourceTree = "<group>"; };
 		5D374E3520E39D4F002C89AE /* OCFuntionStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCFuntionStyleViewController.h; sourceTree = "<group>"; };
@@ -473,6 +476,8 @@
 				5DB7EFB420E240F40030A648 /* SecondTestViewController.m */,
 				5D374E3520E39D4F002C89AE /* OCFuntionStyleViewController.h */,
 				5D374E3620E39D4F002C89AE /* OCFuntionStyleViewController.m */,
+				5D035D2520E4BE0A004C77E4 /* OCBaseManager.h */,
+				5D035D2620E4BE0A004C77E4 /* OCBaseManager.m */,
 				5D899E7C20D3B4D300552152 /* FIrstPage */,
 				5D899E6F20D3AE9400552152 /* SecondPage */,
 				5DB7EFAC20E23C400030A648 /* ThirdPage */,
@@ -712,6 +717,7 @@
 				5DB7EFB520E240F40030A648 /* SecondTestViewController.m in Sources */,
 				5D374E3720E39D4F002C89AE /* OCFuntionStyleViewController.m in Sources */,
 				5DB7EF8420DCCEA00030A648 /* OCDeepLearning.xcdatamodeld in Sources */,
+				5D035D2720E4BE0A004C77E4 /* OCBaseManager.m in Sources */,
 				5DB7EFA420DCD3DA0030A648 /* Student+CoreDataProperties.m in Sources */,
 				5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */,
 				5D4B92101F28A4B6004A242C /* LearnCategory+Addtion2.m in Sources */,
