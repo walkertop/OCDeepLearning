@@ -7,7 +7,7 @@
 //
 
 #import "TestViewController.h"
-
+#import "NSObject+Runtime.h"
 @interface TestViewController ()
 @property(nonatomic, strong) UIButton *exitButton;      // 测试退出命令
 @property(nonatomic, strong) UIButton *addressButton;   // 测试不同类型的内存地址
@@ -73,7 +73,8 @@
 //
 //    @finally {
 //    }
-    exit(0);
+//    exit(0);
+    [self testAsyncDelayScheduledAction];
 }
 
 - (void) alertMemberPointer {
@@ -82,6 +83,58 @@
     NSArray *testNumArr = @[@1,@2];
     NSArray *testStringArr = @[@"a",@"b"];
     
+    [self excuteTimeRecycleAction];
+}
+
+- (void)testAsyncDelayScheduledAction {
+    dispatch_queue_t queue = dispatch_queue_create("test.delayperformSelctor", NULL);
+    
+    dispatch_async(queue, ^{
+//        [self performSelector:@selector(changeBackgroundColor) withObject:nil afterDelay:2];
+        [self performSelector:@selector(changeBackgroundColor) withObject:nil afterDelay:2 inModes:@[NSRunLoopCommonModes]];
+        
+    });
+}
+
+- (void)excuteTimeRecycleAction {
+    
+//    NSTimer *timer1 = [NSTimer timerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        NSLog(@"主线程里打印timer");
+//    }];
+////    [timer1 fire];
+//    [[NSRunLoop currentRunLoop] addTimer:timer1 forMode:NSDefaultRunLoopMode];
+
+    [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        NSLog(@"主线程里打印timer");
+    }];
+    
+    dispatch_queue_t queue = dispatch_queue_create("test.delayperformSelctor2", NULL);
+    
+    dispatch_async(queue, ^{
+     
+        NSLog(@"nsrunloop的相关信息%@",[NSRunLoop currentRunLoop]);
+
+//        NSTimer *timer2 = [NSTimer timerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//            NSLog(@"当前线程是%@打印timer",[NSThread currentThread]);
+//        }];
+//        [[NSRunLoop currentRunLoop] addTimer:timer2 forMode:NSRunLoopCommonModes];
+        [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//            NSLog(@"当前线程是%@打印timer",[NSThread currentThread]);
+            NSLog(@"NSRunloop的相关信息%@",[NSRunLoop currentRunLoop]);
+        }];
+        
+        [NSTimer scheduledTimerWithTimeInterval:2 repeats:NO block:^(NSTimer * _Nonnull timer) {
+            NSLog(@"repeats==NO的NSRunloop的相关信息%@",[NSRunLoop currentRunLoop]);
+        }];
+        
+        NSLog(@"nsrunloop的相关信息%@",[NSRunLoop currentRunLoop]);
+        [[NSRunLoop currentRunLoop] run];
+    });
+    
+}
+
+- (void)changeBackgroundColor {
+    self.view.backgroundColor = [UIColor redColor];
 }
 
 

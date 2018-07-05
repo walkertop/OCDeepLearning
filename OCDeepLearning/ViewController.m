@@ -279,28 +279,9 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
     } else if (indexPath.row == 7) {
         [self testSELIMPMEthod];
     }
-    
-    
-    //    [self testGCD];
-    //    [self testForwardingMethod];
-    //    [self testResolveInstanceMethod];
-    //    [self testKVC];
-    
-    //    [self testOCSEL];
-    //    [self testSELIMPMEthod];
-    
-    
-    //    [self testSynthesize];
-    
-    //    NSArray *array = [UIView properties];
-    //    NSArray *classMethod = [UIView classMethods];
-    //    NSLog(@"%@",array);
-    //    [NSObject logRetainCount:self];   //类方法获取对象的引用计数retainCount
-    
-    //    [self testLearnCategory];
-    //    APTEndSection("test");
-    //    APTEnd;
 }
+
+
 
 
 @end
