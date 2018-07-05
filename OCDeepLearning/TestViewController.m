@@ -11,6 +11,8 @@
 @interface TestViewController ()
 @property(nonatomic, strong) UIButton *exitButton;      // 测试退出命令
 @property(nonatomic, strong) UIButton *addressButton;   // 测试不同类型的内存地址
+
+@property(nonatomic, strong) UIView *blueView;
 @end
 
 @implementation TestViewController
@@ -31,6 +33,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.exitButton];
     [self.view addSubview:self.addressButton];
+    [self.view addSubview:self.blueView];
 }
 
 #pragma mark - lazy
@@ -57,6 +60,13 @@
     return _addressButton;
 }
 
+- (UIView *)blueView {
+    if (!_blueView) {
+        _blueView = [[UIView alloc] initWithFrame:CGRectMake(0, 400, 300, 300)];
+        _blueView.backgroundColor = [UIColor blueColor];
+    }
+    return _blueView;
+}
 
 #pragma mark - private method
 
@@ -83,7 +93,7 @@
     NSArray *testNumArr = @[@1,@2];
     NSArray *testStringArr = @[@"a",@"b"];
     
-    [self excuteTimeRecycleAction];
+//    [self excuteTimeRecycleAction];
 }
 
 - (void)testAsyncDelayScheduledAction {
@@ -136,6 +146,17 @@
 - (void)changeBackgroundColor {
     self.view.backgroundColor = [UIColor redColor];
 }
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSSet *set1 = [event touchesForView:self.view];
+    NSSet *set2 = [event touchesForView:self.exitButton];
+    NSSet *set3 = [event touchesForView:self.addressButton];
+    NSSet *set4 = [event touchesForView:self.blueView];
+    NSSet *windowSet = [event touchesForWindow:[UIApplication sharedApplication].keyWindow];
+}
+
+
+
 
 
 @end
