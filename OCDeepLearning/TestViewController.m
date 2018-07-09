@@ -140,7 +140,6 @@
         NSLog(@"nsrunloop的相关信息%@",[NSRunLoop currentRunLoop]);
         [[NSRunLoop currentRunLoop] run];
     });
-    
 }
 
 - (void)changeBackgroundColor {
@@ -154,9 +153,5 @@
     NSSet *set4 = [event touchesForView:self.blueView];
     NSSet *windowSet = [event touchesForWindow:[UIApplication sharedApplication].keyWindow];
 }
-
-
-
-
 
 @end
