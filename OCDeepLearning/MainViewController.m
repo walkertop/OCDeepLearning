@@ -30,6 +30,10 @@
     secondVc.view.frame = CGRectMake(0, 410, 300, 300);
     [self.view addSubview:secondVc.view];
     
+//    NSArray *a = [NSArray arrayWithObjects:@0,@1, nil];
+//    
+//    NSNumber *num = [a objectAtIndex:3];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,6 +43,12 @@
     
 }
 
+- (void)doesNotRecognizeSelector:(SEL)aSelector {
+    NSLog(@"崩溃的方法是%c",__func__);
+
+    NSLog(@"%@",aSelector);
+
+}
 /*
 #pragma mark - Navigation
 

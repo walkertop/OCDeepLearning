@@ -25,6 +25,7 @@
 #import "LearnCategory.h"
 #import "OCDLLayer.h"
 #import "OCDLView.h"
+#import "ReadMeNSObjcet.h"
 
 
 static NSString  *const kFuntionListOfViewController = @"funtionListOfViewController";
@@ -44,6 +45,7 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
     self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method"];
     [self.funtionStyleTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kFuntionListOfViewController];
     [self.view addSubview:self.funtionStyleTableView];
+    [ReadMeNSObjcet learnIDTypeInCollction];
 //    APTBegin;
 //    APTBeginSection("test");
     // Do any additional setup after loading the view, typically from a nib.
@@ -280,6 +282,10 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
         [self testSELIMPMEthod];
     }
 }
+
+
+
+
 
 
 
