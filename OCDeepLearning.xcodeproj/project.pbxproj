@@ -101,6 +101,7 @@
 		5D149335210DAE2F0070B1B8 /* NSObject+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Additions.m"; sourceTree = "<group>"; };
 		5D149338210DB43E0070B1B8 /* ReadMeNSObjcet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadMeNSObjcet.h; sourceTree = "<group>"; };
 		5D149339210DB43E0070B1B8 /* ReadMeNSObjcet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadMeNSObjcet.m; sourceTree = "<group>"; };
+		5D14933B210DFA6E0070B1B8 /* REDEMEProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REDEMEProtocol.h; sourceTree = "<group>"; };
 		5D374E3220E39AE4002C89AE /* OCSaveDataTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSaveDataTableViewController.h; sourceTree = "<group>"; };
 		5D374E3320E39AE4002C89AE /* OCSaveDataTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCSaveDataTableViewController.m; sourceTree = "<group>"; };
 		5D374E3520E39D4F002C89AE /* OCFuntionStyleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCFuntionStyleViewController.h; sourceTree = "<group>"; };
@@ -241,6 +242,7 @@
 			children = (
 				5D149338210DB43E0070B1B8 /* ReadMeNSObjcet.h */,
 				5D149339210DB43E0070B1B8 /* ReadMeNSObjcet.m */,
+				5D14933B210DFA6E0070B1B8 /* REDEMEProtocol.h */,
 			);
 			name = ReadMe;
 			sourceTree = "<group>";

@@ -82,4 +82,12 @@ static NSString* const kCustomIdentifier = @"customIdentifier";
 }
 
 
+- (void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
+    
+}
+
+- (void)dealloc {
+    
+}
+
 @end
