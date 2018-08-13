@@ -26,7 +26,6 @@ struct GCDQueue {
         NSLog(@"异步线程为%@",[NSThread currentThread]);
     });
     
-    // TODO: 正常不应该是死锁么，为什么这里执行了
     //同步串行队列
     dispatch_sync(serialQueue, ^{
         NSLog(@"同步串行线程为%@",[NSThread currentThread]);
@@ -41,7 +40,6 @@ struct GCDQueue {
         NSLog(@"当前第二个线程为%@",[NSThread currentThread]);
     });
     
-    // TODO: (ARC下已经解决了队列的释放问题)
 }
 
 - (void)testGroup {
@@ -73,8 +71,12 @@ struct GCDQueue {
 - (void)testBarrier {
     
     /*
-     打印结果是：
-     
+     打印顺序是：
+     barrier之前的dispatch-1
+     barrier之前的dispatch-2
+     dispatch-barrier
+     barrier之后的dispatch-3
+     barrier之后的dispatch-4
      */
     
     dispatch_queue_t concurrentQueue = dispatch_queue_create("test.gcd.barrier", DISPATCH_QUEUE_CONCURRENT);
@@ -96,19 +98,35 @@ struct GCDQueue {
 }
 
 - (void)testWait {
-  
+    dispatch_queue_t queue = dispatch_queue_create("alibaba-inc.com", NULL);
+
+    dispatch_async(queue, ^{
+        // 异步
+        [NSThread sleepForTimeInterval:2];// 模拟耗时操作
+        NSLog(@"异步队列---%@",[NSThread currentThread]); // 打印当前线程
+    });
     
+    dispatch_sync(queue, ^{
+        // 同步
+        [NSThread sleepForTimeInterval:2];
+        // 模拟耗时操作
+        NSLog(@"3---%@",[NSThread currentThread]);
+        // 打印当前线程
+    });
 }
 
 - (void)testSyncMain {
     
+    NSLog(@"syncMain---begin");
     /*
      * 同步主队列会crash
+     * crash信息：Thread 1: EXC_BAD_INSTRUCTION (code=EXC_I386_INVOP, subcode=0x0)
      */
     
     NSLog(@"currentThread---%@",[NSThread currentThread]);
     // 打印当前线程NSLog(@"syncMain---begin");
     dispatch_queue_t queue = dispatch_get_main_queue();
+    
     dispatch_sync(queue, ^{// 追加任务1
         for(int i =0; i < 2; ++i) {
             [NSThread sleepForTimeInterval:2];
@@ -116,30 +134,8 @@ struct GCDQueue {
             NSLog(@"1---%@",[NSThread currentThread]);
             // 打印当前线程
         }
-        
-    });
-    dispatch_sync(queue, ^{
-        // 追加任务2
-        for(int i =0; i <2; ++i) {
-            [NSThread sleepForTimeInterval:2];// 模拟耗时操作
-            NSLog(@"2---%@",[NSThread currentThread]); // 打印当前线程
-        }
-    });
-    
-    dispatch_sync(queue, ^{
-        // 追加任务3
-        for(int i =0; i < 2; ++i) {
-            [NSThread sleepForTimeInterval:2];
-            // 模拟耗时操作
-            NSLog(@"3---%@",[NSThread currentThread]);
-            // 打印当前线程
-        }
     });
     NSLog(@"syncMain---end");
-    
 }
-        
- 
-
 
 @end

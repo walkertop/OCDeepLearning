@@ -94,7 +94,9 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 - (void)testGCD {
     GCDLearning *gcd = [[GCDLearning alloc] init];
     
-    [gcd testBarrier];
+//    [gcd testBarrier];
+//    [gcd testSyncMain];
+    [gcd testWait];
 //    [gcd testQueue];
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [gcd testGroup];

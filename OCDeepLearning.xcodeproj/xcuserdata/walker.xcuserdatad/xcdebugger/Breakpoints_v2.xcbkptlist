@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OCDeepLearning/ViewController.m"
-            timestampString = "554546979.877703"
+            timestampString = "555840805.496338"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "-testRetainCount"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OCDeepLearning/ViewController.m"
-            timestampString = "554546979.877771"
+            timestampString = "555840805.496714"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
+            startingLineNumber = "212"
+            endingLineNumber = "212"
             landmarkName = "ViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -484,7 +484,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OCDeepLearning/GCDLearning.m"
-            timestampString = "551873717.1791151"
+            timestampString = "555840805.497378"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -500,11 +500,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OCDeepLearning/GCDLearning.m"
-            timestampString = "551873717.179616"
+            timestampString = "555840805.497658"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "-testQueue"
             landmarkType = "7">
          </BreakpointContent>
@@ -516,7 +516,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OCDeepLearning/GCDLearning.m"
-            timestampString = "551873717.179881"
+            timestampString = "555840805.4978811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -532,11 +532,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OCDeepLearning/GCDLearning.m"
-            timestampString = "551873717.1801209"
+            timestampString = "555840805.498104"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "-testQueue"
             landmarkType = "7">
             <Locations>
@@ -547,12 +547,12 @@
                   symbolName = "-[GCDLearning testQueue]"
                   moduleName = "OCDeepLearning"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/walker/Dev/ADeepLearning/OCDeepLearning/OCDeepLearning/GCDLearning.m"
-                  timestampString = "554546736.135288"
+                  urlString = "file:///Users/walker/Developer/Custom%20Repository/My%20Github/OCDeepLearning/OCDeepLearning/GCDLearning.m"
+                  timestampString = "555840805.691837"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
                   offsetFromSymbolStart = "68">
                </Location>
                <Location
@@ -562,12 +562,12 @@
                   symbolName = "__24-[GCDLearning testQueue]_block_invoke_2"
                   moduleName = "OCDeepLearning"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/walker/Dev/ADeepLearning/OCDeepLearning/OCDeepLearning/GCDLearning.m"
-                  timestampString = "554546736.138208"
+                  urlString = "file:///Users/walker/Developer/Custom%20Repository/My%20Github/OCDeepLearning/OCDeepLearning/GCDLearning.m"
+                  timestampString = "555840805.694153"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
                   offsetFromSymbolStart = "16">
                </Location>
             </Locations>
@@ -595,13 +595,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OCDeepLearning/NSObject+Runtime.m"
-            timestampString = "554546979.878222"
+            filePath = "OCDeepLearning/GCDLearning.m"
+            timestampString = "555840805.498348"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "-gb_viewDidLoad"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-testBarrier"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -611,46 +611,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OCDeepLearning/NSObject+Runtime.m"
-            timestampString = "554546979.878288"
+            filePath = "OCDeepLearning/GCDLearning.m"
+            timestampString = "555840813.05811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "+load"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "-testWait"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OCDeepLearning/NSObject+Runtime.m"
-            timestampString = "554546979.87834"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "-exchangeViewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OCDeepLearning/ViewController.m"
-            timestampString = "554546979.87839"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GCDLearning testWait]"
+                  moduleName = "OCDeepLearning"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/walker/Developer/Custom%20Repository/My%20Github/OCDeepLearning/OCDeepLearning/GCDLearning.m"
+                  timestampString = "555840813.269466"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "49">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__23-[GCDLearning testWait]_block_invoke"
+                  moduleName = "OCDeepLearning"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/walker/Developer/Custom%20Repository/My%20Github/OCDeepLearning/OCDeepLearning/GCDLearning.m"
+                  timestampString = "555840813.271324"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
