@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef int(^OCIntBlock)(int a, int b);
+
 @interface BlockLearning : NSObject
+
+@property(nonatomic, assign) OCIntBlock intblock;
+
++ (instancetype)sharedInstance;
+
+- (void)testBlockLearning;
 
 @end

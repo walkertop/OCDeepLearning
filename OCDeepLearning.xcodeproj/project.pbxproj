@@ -58,6 +58,7 @@
 		5DC2A35120B3EEF300565281 /* OCDLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2A35020B3EEF300565281 /* OCDLView.m */; };
 		5DC2A35420B3EF1500565281 /* OCDLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2A35320B3EF1500565281 /* OCDLLayer.m */; };
 		5DD027891F25AA19005438B9 /* OCAutorelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD027881F25AA19005438B9 /* OCAutorelease.m */; };
+		5DEA105421229FE3003869F1 /* BlockLearning.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA105321229FE3003869F1 /* BlockLearning.m */; };
 		5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */; };
 		5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */; };
 		5DF90FE71F1C5AF100B809C5 /* OC_AClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF90FE61F1C5AF100B809C5 /* OC_AClass.m */; };
@@ -203,6 +204,8 @@
 		5DC2A35320B3EF1500565281 /* OCDLLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCDLLayer.m; sourceTree = "<group>"; };
 		5DD027871F25AA19005438B9 /* OCAutorelease.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAutorelease.h; sourceTree = "<group>"; };
 		5DD027881F25AA19005438B9 /* OCAutorelease.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAutorelease.m; sourceTree = "<group>"; };
+		5DEA105221229FE3003869F1 /* BlockLearning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockLearning.h; sourceTree = "<group>"; };
+		5DEA105321229FE3003869F1 /* BlockLearning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockLearning.m; sourceTree = "<group>"; };
 		5DF622CE1F161E5200D74036 /* ViewController+SwizzlingMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+SwizzlingMethod.h"; sourceTree = "<group>"; };
 		5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+SwizzlingMethod.m"; sourceTree = "<group>"; };
 		5DF622D21F1620DD00D74036 /* NSObject+GBRuntimeLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+GBRuntimeLog.h"; sourceTree = "<group>"; };
@@ -329,6 +332,7 @@
 				5D45A24B1F171EBB00D60780 /* Tools */,
 				5DF691F61F289D1F00487691 /* Category */,
 				5D77E5771F14E2C5005A8459 /* ARC */,
+				5DEA105121229FB2003869F1 /* Block */,
 				5D77E5761F14E293005A8459 /* Runtime */,
 				5D77E5751F14E283005A8459 /* GCD */,
 				5D9393BB20DC9F1A00A61440 /* UIView&CALayer */,
@@ -551,6 +555,15 @@
 			name = "@synthesize";
 			sourceTree = "<group>";
 		};
+		5DEA105121229FB2003869F1 /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				5DEA105221229FE3003869F1 /* BlockLearning.h */,
+				5DEA105321229FE3003869F1 /* BlockLearning.m */,
+			);
+			name = Block;
+			sourceTree = "<group>";
+		};
 		5DF622D11F1620DD00D74036 /* GBRuntimeLog */ = {
 			isa = PBXGroup;
 			children = (
@@ -746,6 +759,7 @@
 				5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */,
 				5D5F4E831F0F6786000DE712 /* AppDelegate.m in Sources */,
 				5D77E5741F14D9EE005A8459 /* GCDLearning.m in Sources */,
+				5DEA105421229FE3003869F1 /* BlockLearning.m in Sources */,
 				5D71C43620C6689800EDD506 /* AppDelegate+Addtions.m in Sources */,
 				5D149336210DAE2F0070B1B8 /* NSObject+Additions.m in Sources */,
 				5D5F4E801F0F6786000DE712 /* main.m in Sources */,
