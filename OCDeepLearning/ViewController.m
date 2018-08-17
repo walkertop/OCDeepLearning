@@ -27,6 +27,7 @@
 #import "OCDLView.h"
 #import "ReadMeNSObjcet.h"
 #import "BlockLearning.h"
+#import "LearnInitializeChildClass.h"
 
 
 
@@ -44,7 +45,7 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method",@"block",@"GCD的leave,enter和wait"];
+    self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method",@"block",@"GCD的leave,enter和wait",@"initialize"];
     [self.funtionStyleTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kFuntionListOfViewController];
     [self.view addSubview:self.funtionStyleTableView];
     [ReadMeNSObjcet learnIDTypeInCollction];
@@ -288,6 +289,8 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
         [[BlockLearning sharedInstance] testBlockLearning];
     } else if (indexPath.row == 9) {
         [[GCDLearning sharedInstance] testGroupOfEnterLeaveAndWait];
+    } else if (indexPath.row == 10) {
+        [[LearnInitializeChildClass sharedInstance] test];
     }
 }
 
