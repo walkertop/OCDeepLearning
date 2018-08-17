@@ -29,6 +29,9 @@
 #import "BlockLearning.h"
 #import "LearnInitializeChildClass.h"
 
+#import "LearnDatasourceClass.h"
+
+
 
 
 static NSString  *const kFuntionListOfViewController = @"funtionListOfViewController";
@@ -73,6 +76,8 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 //    [self testLearnCategory];
 //    APTEndSection("test");
 //    APTEnd;
+    
+    [[LearnDatasourceClass sharedInstance] postNotify];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -289,16 +294,10 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
         [[BlockLearning sharedInstance] testBlockLearning];
     } else if (indexPath.row == 9) {
         [[GCDLearning sharedInstance] testGroupOfEnterLeaveAndWait];
+        
     } else if (indexPath.row == 10) {
         [[LearnInitializeChildClass sharedInstance] test];
     }
 }
-
-
-
-
-
-
-
 
 @end
