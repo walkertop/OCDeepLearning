@@ -14,7 +14,8 @@ static NSString *const kThirdNotificationName = @"thirdNotificationName";
 
 @interface LearnDatasourceClass()
 
-@property(nonatomic, strong) NSMutableArray *allNotifyArray;
+@property(nonatomic, strong) NSMutableArray *allNotifyArray;   // 获取所有的通知
+
 
 @end
 
@@ -24,18 +25,11 @@ static NSString *const kThirdNotificationName = @"thirdNotificationName";
  
  1. 通知默认是同步的
  2. 如果通知的线程是异步的，即post和接收的都是，可以使用
- addObserverForName:<#(nullable NSNotificationName)#> object:<#(nullable id)#> queue:<#(nullable NSOperationQueue *)#> usingBlock:<#^(NSNotification * _Nonnull note)block#>
- 方法
- 
+     addObserverForName:<#(nullable NSNotificationName)#> object:<#(nullable id)#> queue:<#(nullable NSOperationQueue *)#> usingBlock:<#^(NSNotification * _Nonnull note)block#>
+     方法
  3. 如果通知的name填写为nil,则会接收所有的通知、（所以可以利用trick,获取所有的通知）
- 
- 
  */
 
-
-
-
-#pragma mark - 通知的消息处理
 + (instancetype)sharedInstance {
     static LearnDatasourceClass *sharedInstance = nil;
     static dispatch_once_t onceToken;
@@ -45,6 +39,7 @@ static NSString *const kThirdNotificationName = @"thirdNotificationName";
     return sharedInstance;
 }
 
+#pragma mark - 通知
 - (void)postNotify {
     NSString *firstString  = @"这是第1个通知";
     NSString *secondString = @"这是第2个通知";
@@ -99,6 +94,20 @@ static NSString *const kThirdNotificationName = @"thirdNotificationName";
     NSLog(@"第3个通知的通知详情%@",notify);
 }
 
+
+#pragma mark - KVO
+- (void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
+    
+}
+
+
+
+
+
+
+
+
+
 #pragma mark - lazy load
 - (NSMutableArray *)allNotifyArray {
     if (!_allNotifyArray) {
@@ -107,9 +116,36 @@ static NSString *const kThirdNotificationName = @"thirdNotificationName";
     return _allNotifyArray;
 }
 
+
+- (void)learnKVO {
+    self.KVOString = @"old";
+    [self.KVOString addObserver:self forKeyPath:@"KVOString" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    self.KVOString = @"new";
+
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:@"KVOString"]) {
+        NSLog(@"KVO的值是%@",change);
+    }
+}
+
+- (void)willChangeValueForKey:(NSString *)key {
+    if ([key isEqualToString:@"KVOString"]) {
+        NSLog(@"key%@",key);
+    }
+}
+
+- (void)didChangeValueForKey:(NSString *)key {
+    if ([key isEqualToString:@"KVOString"]) {
+        NSLog(@"key%@",key);
+    }
+}
+
 - (void)dealloc {
     //移除通知
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [self.KVOString removeObserver:self forKeyPath:@"KVOString"];
 }
 
 @end

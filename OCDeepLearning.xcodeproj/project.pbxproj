@@ -34,6 +34,9 @@
 		5D5F4EA41F0F6786000DE712 /* OCDeepLearningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4EA31F0F6786000DE712 /* OCDeepLearningUITests.m */; };
 		5D5F4EB31F0F67BF000DE712 /* OCAutoReleasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4EB21F0F67BF000DE712 /* OCAutoReleasePool.m */; };
 		5D5F4EB61F0F7215000DE712 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4EB51F0F7215000DE712 /* NSObject+Runtime.m */; };
+		5D6588CF212ADCBB0092BD78 /* LearnWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6588CE212ADCBB0092BD78 /* LearnWebViewController.m */; };
+		5D6588D2212ADCF70092BD78 /* LearnWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6588D1212ADCF70092BD78 /* LearnWKWebView.m */; };
+		5D6588D5212ADD160092BD78 /* LearnUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6588D4212ADD160092BD78 /* LearnUIWebView.m */; };
 		5D71C43620C6689800EDD506 /* AppDelegate+Addtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D71C43520C6689800EDD506 /* AppDelegate+Addtions.m */; };
 		5D71C43920C66BDD00EDD506 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D71C43820C66BDD00EDD506 /* TestViewController.m */; };
 		5D77E5741F14D9EE005A8459 /* GCDLearning.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D77E5731F14D9EE005A8459 /* GCDLearning.m */; };
@@ -150,6 +153,12 @@
 		5D5F4EB21F0F67BF000DE712 /* OCAutoReleasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAutoReleasePool.m; sourceTree = "<group>"; };
 		5D5F4EB41F0F7215000DE712 /* NSObject+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
 		5D5F4EB51F0F7215000DE712 /* NSObject+Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
+		5D6588CD212ADCBB0092BD78 /* LearnWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnWebViewController.h; sourceTree = "<group>"; };
+		5D6588CE212ADCBB0092BD78 /* LearnWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnWebViewController.m; sourceTree = "<group>"; };
+		5D6588D0212ADCF70092BD78 /* LearnWKWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnWKWebView.h; sourceTree = "<group>"; };
+		5D6588D1212ADCF70092BD78 /* LearnWKWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnWKWebView.m; sourceTree = "<group>"; };
+		5D6588D3212ADD160092BD78 /* LearnUIWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnUIWebView.h; sourceTree = "<group>"; };
+		5D6588D4212ADD160092BD78 /* LearnUIWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnUIWebView.m; sourceTree = "<group>"; };
 		5D71C43420C6689800EDD506 /* AppDelegate+Addtions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Addtions.h"; sourceTree = "<group>"; };
 		5D71C43520C6689800EDD506 /* AppDelegate+Addtions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Addtions.m"; sourceTree = "<group>"; };
 		5D71C43720C66BDD00EDD506 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -349,6 +358,7 @@
 				5D77E5761F14E293005A8459 /* Runtime */,
 				5D77E5751F14E283005A8459 /* GCD */,
 				5D9393BB20DC9F1A00A61440 /* UIView&CALayer */,
+				5D6588CC212ADC960092BD78 /* webView */,
 				5D9393A120DB997900A61440 /* DB */,
 				5D5F4E7E1F0F6786000DE712 /* Supporting Files */,
 			);
@@ -387,6 +397,19 @@
 				5D5F4EA51F0F6786000DE712 /* Info.plist */,
 			);
 			path = OCDeepLearningUITests;
+			sourceTree = "<group>";
+		};
+		5D6588CC212ADC960092BD78 /* webView */ = {
+			isa = PBXGroup;
+			children = (
+				5D6588CD212ADCBB0092BD78 /* LearnWebViewController.h */,
+				5D6588CE212ADCBB0092BD78 /* LearnWebViewController.m */,
+				5D6588D3212ADD160092BD78 /* LearnUIWebView.h */,
+				5D6588D4212ADD160092BD78 /* LearnUIWebView.m */,
+				5D6588D0212ADCF70092BD78 /* LearnWKWebView.h */,
+				5D6588D1212ADCF70092BD78 /* LearnWKWebView.m */,
+			);
+			name = webView;
 			sourceTree = "<group>";
 		};
 		5D77E5751F14E283005A8459 /* GCD */ = {
@@ -778,13 +801,16 @@
 				5DB7EF8420DCCEA00030A648 /* OCDeepLearning.xcdatamodeld in Sources */,
 				5D035D2720E4BE0A004C77E4 /* OCBaseManager.m in Sources */,
 				5DB7EFA420DCD3DA0030A648 /* Student+CoreDataProperties.m in Sources */,
+				5D6588D5212ADD160092BD78 /* LearnUIWebView.m in Sources */,
 				5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */,
+				5D6588CF212ADCBB0092BD78 /* LearnWebViewController.m in Sources */,
 				5D14933A210DB43E0070B1B8 /* ReadMeNSObjcet.m in Sources */,
 				5D4B92101F28A4B6004A242C /* LearnCategory+Addtion2.m in Sources */,
 				5D86904B1F18D6BB00C269C8 /* OC_IMP.m in Sources */,
 				5D035D2420E489EB004C77E4 /* OCSaveManager.m in Sources */,
 				5D4B920D1F28A4AB004A242C /* LearnCategory+Addtion1.m in Sources */,
 				5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */,
+				5D6588D2212ADCF70092BD78 /* LearnWKWebView.m in Sources */,
 				5DEA105D2125763C003869F1 /* LearnInitializeBaseClass.m in Sources */,
 				5D5F4E831F0F6786000DE712 /* AppDelegate.m in Sources */,
 				5D77E5741F14D9EE005A8459 /* GCDLearning.m in Sources */,

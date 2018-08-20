@@ -10,10 +10,12 @@
 
 @interface LearnDatasourceClass : NSObject
 
+@property(nonatomic, copy) NSString *KVOString;
 
 + (instancetype)sharedInstance;
 
 - (void)postNotify;
-- (void)addobserveNotify;
+- (void)learnKVO;
+
 
 @end

@@ -30,6 +30,8 @@
 #import "LearnInitializeChildClass.h"
 
 #import "LearnDatasourceClass.h"
+#import "LearnUIWebView.h"
+#import "LearnWKWebView.h"
 
 
 
@@ -77,7 +79,9 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 //    APTEndSection("test");
 //    APTEnd;
     
-    [[LearnDatasourceClass sharedInstance] postNotify];
+//    [[LearnDatasourceClass sharedInstance] postNotify];
+    [[LearnDatasourceClass sharedInstance] learnKVO];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -296,7 +300,13 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
         [[GCDLearning sharedInstance] testGroupOfEnterLeaveAndWait];
         
     } else if (indexPath.row == 10) {
-        [[LearnInitializeChildClass sharedInstance] test];
+//        [[LearnInitializeChildClass sharedInstance] test];
+        
+        [LearnDatasourceClass sharedInstance].KVOString = @"new";
+    } else if (indexPath.row == 11) {
+        [[LearnUIWebView sharedInstance] ui_openURL:@"www"];
+    } else if (indexPath.row == 12) {
+        [[LearnWKWebView sharedInstance] wk_openURL:@"dsd"];
     }
 }
 
