@@ -33,6 +33,8 @@
 #import "LearnUIWebView.h"
 #import "LearnWKWebView.h"
 
+#import "LearnSelfAndSuper.h"
+
 
 
 
@@ -50,7 +52,7 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method",@"block",@"GCD的leave,enter和wait",@"initialize"];
+    self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method",@"block",@"GCD的leave,enter和wait",@"initialize",@"UIWebView",@"WKWebView",@"self&super"];
     [self.funtionStyleTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kFuntionListOfViewController];
     [self.view addSubview:self.funtionStyleTableView];
     [ReadMeNSObjcet learnIDTypeInCollction];
@@ -307,6 +309,9 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
         [[LearnUIWebView sharedInstance] ui_openURL:@"www"];
     } else if (indexPath.row == 12) {
         [[LearnWKWebView sharedInstance] wk_openURL:@"dsd"];
+    } else if (indexPath.row == 13) {
+        LearnChild *child = [[LearnChild alloc] init];
+        
     }
 }
 

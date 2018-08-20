@@ -34,6 +34,7 @@
 		5D5F4EA41F0F6786000DE712 /* OCDeepLearningUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4EA31F0F6786000DE712 /* OCDeepLearningUITests.m */; };
 		5D5F4EB31F0F67BF000DE712 /* OCAutoReleasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4EB21F0F67BF000DE712 /* OCAutoReleasePool.m */; };
 		5D5F4EB61F0F7215000DE712 /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5F4EB51F0F7215000DE712 /* NSObject+Runtime.m */; };
+		5D60C5B7212B023100AB9BFD /* LearnSelfAndSuper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D60C5B6212B023100AB9BFD /* LearnSelfAndSuper.m */; };
 		5D6588CF212ADCBB0092BD78 /* LearnWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6588CE212ADCBB0092BD78 /* LearnWebViewController.m */; };
 		5D6588D2212ADCF70092BD78 /* LearnWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6588D1212ADCF70092BD78 /* LearnWKWebView.m */; };
 		5D6588D5212ADD160092BD78 /* LearnUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6588D4212ADD160092BD78 /* LearnUIWebView.m */; };
@@ -154,6 +155,8 @@
 		5D5F4EB21F0F67BF000DE712 /* OCAutoReleasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAutoReleasePool.m; sourceTree = "<group>"; };
 		5D5F4EB41F0F7215000DE712 /* NSObject+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
 		5D5F4EB51F0F7215000DE712 /* NSObject+Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
+		5D60C5B5212B023100AB9BFD /* LearnSelfAndSuper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnSelfAndSuper.h; sourceTree = "<group>"; };
+		5D60C5B6212B023100AB9BFD /* LearnSelfAndSuper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnSelfAndSuper.m; sourceTree = "<group>"; };
 		5D6588CD212ADCBB0092BD78 /* LearnWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnWebViewController.h; sourceTree = "<group>"; };
 		5D6588CE212ADCBB0092BD78 /* LearnWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnWebViewController.m; sourceTree = "<group>"; };
 		5D6588D0212ADCF70092BD78 /* LearnWKWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnWKWebView.h; sourceTree = "<group>"; };
@@ -350,6 +353,7 @@
 		5D5F4E7D1F0F6786000DE712 /* OCDeepLearning */ = {
 			isa = PBXGroup;
 			children = (
+				5D60C5B4212B021000AB9BFD /* self & super */,
 				5DEA106B2126A124003869F1 /* DataSource */,
 				5D149337210DB4160070B1B8 /* ReadMe */,
 				5D9393BC20DC9F4700A61440 /* VC */,
@@ -399,6 +403,15 @@
 				5D5F4EA51F0F6786000DE712 /* Info.plist */,
 			);
 			path = OCDeepLearningUITests;
+			sourceTree = "<group>";
+		};
+		5D60C5B4212B021000AB9BFD /* self & super */ = {
+			isa = PBXGroup;
+			children = (
+				5D60C5B5212B023100AB9BFD /* LearnSelfAndSuper.h */,
+				5D60C5B6212B023100AB9BFD /* LearnSelfAndSuper.m */,
+			);
+			name = "self & super";
 			sourceTree = "<group>";
 		};
 		5D6588CC212ADC960092BD78 /* webView */ = {
@@ -805,6 +818,7 @@
 				5DB7EFA420DCD3DA0030A648 /* Student+CoreDataProperties.m in Sources */,
 				5D6588D5212ADD160092BD78 /* LearnUIWebView.m in Sources */,
 				5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */,
+				5D60C5B7212B023100AB9BFD /* LearnSelfAndSuper.m in Sources */,
 				5D6588CF212ADCBB0092BD78 /* LearnWebViewController.m in Sources */,
 				5D14933A210DB43E0070B1B8 /* ReadMeNSObjcet.m in Sources */,
 				5D4B92101F28A4B6004A242C /* LearnCategory+Addtion2.m in Sources */,
