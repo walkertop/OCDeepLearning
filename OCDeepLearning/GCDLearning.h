@@ -9,11 +9,18 @@
 #import <Foundation/Foundation.h>
 
 @interface GCDLearning : NSObject
-- (void)testQueue;  
+
+
++ (instancetype)sharedInstance;
+
+- (void)testQueue;
+
 - (void)testGroup;
+- (void)testGroupOfEnterLeaveAndWait;
 
 - (void)testBarrier;
 - (void)testWait;
 - (void)testSyncMain;
+
 
 @end

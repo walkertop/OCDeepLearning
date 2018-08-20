@@ -26,6 +26,14 @@
 #import "OCDLLayer.h"
 #import "OCDLView.h"
 #import "ReadMeNSObjcet.h"
+#import "BlockLearning.h"
+#import "LearnInitializeChildClass.h"
+
+#import "LearnDatasourceClass.h"
+#import "LearnUIWebView.h"
+#import "LearnWKWebView.h"
+
+
 
 
 static NSString  *const kFuntionListOfViewController = @"funtionListOfViewController";
@@ -42,7 +50,7 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method"];
+    self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method",@"block",@"GCD的leave,enter和wait",@"initialize"];
     [self.funtionStyleTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kFuntionListOfViewController];
     [self.view addSubview:self.funtionStyleTableView];
     [ReadMeNSObjcet learnIDTypeInCollction];
@@ -70,6 +78,10 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 //    [self testLearnCategory];
 //    APTEndSection("test");
 //    APTEnd;
+    
+//    [[LearnDatasourceClass sharedInstance] postNotify];
+    [[LearnDatasourceClass sharedInstance] learnKVO];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -94,7 +106,9 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 - (void)testGCD {
     GCDLearning *gcd = [[GCDLearning alloc] init];
     
-    [gcd testBarrier];
+//    [gcd testBarrier];
+//    [gcd testSyncMain];
+    [gcd testWait];
 //    [gcd testQueue];
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [gcd testGroup];
@@ -280,14 +294,20 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
         [self testForwardingMethod];
     } else if (indexPath.row == 7) {
         [self testSELIMPMEthod];
+    } else if (indexPath.row == 8) {
+        [[BlockLearning sharedInstance] testBlockLearning];
+    } else if (indexPath.row == 9) {
+        [[GCDLearning sharedInstance] testGroupOfEnterLeaveAndWait];
+        
+    } else if (indexPath.row == 10) {
+//        [[LearnInitializeChildClass sharedInstance] test];
+        
+        [LearnDatasourceClass sharedInstance].KVOString = @"new";
+    } else if (indexPath.row == 11) {
+        [[LearnUIWebView sharedInstance] ui_openURL:@"www"];
+    } else if (indexPath.row == 12) {
+        [[LearnWKWebView sharedInstance] wk_openURL:@"dsd"];
     }
 }
-
-
-
-
-
-
-
 
 @end
