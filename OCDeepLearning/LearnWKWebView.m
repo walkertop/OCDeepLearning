@@ -19,8 +19,10 @@
     return sharedInstance;
 }
 
-- (void)wk_openURL:(NSString *)URL {
-    
+- (void)wk_openURLString:(NSString *)URLString {
+    NSURL *URL = [NSURL URLWithString:URLString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    [self loadRequest:request];
 }
 
 @end

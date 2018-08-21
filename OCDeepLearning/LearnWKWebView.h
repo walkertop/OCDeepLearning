@@ -14,7 +14,7 @@
 
 
 
-- (void)wk_openURL:(NSString *)URL;
+- (void)wk_openURLString:(NSString *)URLString;
 
 
 @end
