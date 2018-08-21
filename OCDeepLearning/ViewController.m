@@ -306,9 +306,9 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
         
         [LearnDatasourceClass sharedInstance].KVOString = @"new";
     } else if (indexPath.row == 11) {
-        [[LearnUIWebView sharedInstance] ui_openURL:@"www"];
+        [[LearnUIWebView sharedInstance] ui_openURLString:@"www.baidu.com"];
     } else if (indexPath.row == 12) {
-        [[LearnWKWebView sharedInstance] wk_openURL:@"dsd"];
+        [[LearnWKWebView sharedInstance] wk_openURLString:@"www.sohu.com"];
     } else if (indexPath.row == 13) {
         LearnChild *child = [[LearnChild alloc] init];
         
