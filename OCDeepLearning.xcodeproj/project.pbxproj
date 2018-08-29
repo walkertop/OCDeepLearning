@@ -62,6 +62,7 @@
 		5DC2A35120B3EEF300565281 /* OCDLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2A35020B3EEF300565281 /* OCDLView.m */; };
 		5DC2A35420B3EF1500565281 /* OCDLLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC2A35320B3EF1500565281 /* OCDLLayer.m */; };
 		5DD027891F25AA19005438B9 /* OCAutorelease.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DD027881F25AA19005438B9 /* OCAutorelease.m */; };
+		5DE398E321368E64003F50FF /* OCDataSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE398E221368E64003F50FF /* OCDataSourceManager.m */; };
 		5DEA105421229FE3003869F1 /* BlockLearning.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA105321229FE3003869F1 /* BlockLearning.m */; };
 		5DEA105D2125763C003869F1 /* LearnInitializeBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA105C2125763C003869F1 /* LearnInitializeBaseClass.m */; };
 		5DEA106021257664003869F1 /* LearnInitializeChildClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA105F21257664003869F1 /* LearnInitializeChildClass.m */; };
@@ -221,6 +222,8 @@
 		5DC2A35320B3EF1500565281 /* OCDLLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCDLLayer.m; sourceTree = "<group>"; };
 		5DD027871F25AA19005438B9 /* OCAutorelease.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCAutorelease.h; sourceTree = "<group>"; };
 		5DD027881F25AA19005438B9 /* OCAutorelease.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCAutorelease.m; sourceTree = "<group>"; };
+		5DE398E121368E64003F50FF /* OCDataSourceManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCDataSourceManager.h; sourceTree = "<group>"; };
+		5DE398E221368E64003F50FF /* OCDataSourceManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCDataSourceManager.m; sourceTree = "<group>"; };
 		5DEA105221229FE3003869F1 /* BlockLearning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockLearning.h; sourceTree = "<group>"; };
 		5DEA105321229FE3003869F1 /* BlockLearning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockLearning.m; sourceTree = "<group>"; };
 		5DEA105B2125763C003869F1 /* LearnInitializeBaseClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LearnInitializeBaseClass.h; sourceTree = "<group>"; };
@@ -353,6 +356,7 @@
 		5D5F4E7D1F0F6786000DE712 /* OCDeepLearning */ = {
 			isa = PBXGroup;
 			children = (
+				5DE398E021368E44003F50FF /* Manager */,
 				5D60C5B4212B021000AB9BFD /* self & super */,
 				5DEA106B2126A124003869F1 /* DataSource */,
 				5D149337210DB4160070B1B8 /* ReadMe */,
@@ -603,6 +607,15 @@
 			name = Monitor;
 			sourceTree = "<group>";
 		};
+		5DE398E021368E44003F50FF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5DE398E121368E64003F50FF /* OCDataSourceManager.h */,
+				5DE398E221368E64003F50FF /* OCDataSourceManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
 		5DE5C9671F1C6C05004B2A81 /* @synthesize */ = {
 			isa = PBXGroup;
 			children = (
@@ -813,6 +826,7 @@
 				5D5F4EB61F0F7215000DE712 /* NSObject+Runtime.m in Sources */,
 				5DB7EFB520E240F40030A648 /* SecondTestViewController.m in Sources */,
 				5D374E3720E39D4F002C89AE /* OCFuntionStyleViewController.m in Sources */,
+				5DE398E321368E64003F50FF /* OCDataSourceManager.m in Sources */,
 				5DB7EF8420DCCEA00030A648 /* OCDeepLearning.xcdatamodeld in Sources */,
 				5D035D2720E4BE0A004C77E4 /* OCBaseManager.m in Sources */,
 				5DB7EFA420DCD3DA0030A648 /* Student+CoreDataProperties.m in Sources */,
