@@ -15,8 +15,11 @@ static NSArray *kSomeArray;
 //static NSArray *kConstArray = [NSArray array];
 // NOTE:
 // 报错Initializer element is not a compile-time constant
-// 初始化的元素不是编译时的常量，（NSArray是对象类型，依赖运行时，所以在编译期间，无法进行初始化操作）
+// 初始化的值，不是一个编译时常量
 // 如果需要初始化全局状态，可以外部声明，在initialize里初始化
+// NOTE：
+static NSString* const kSomeString = @"someString";// 这个没问题，是因为直接用字面量给kSomeString赋值，内存在苍凉去
+
 
 @implementation LearnInitializeChildClass
 

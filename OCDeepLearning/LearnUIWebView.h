@@ -10,6 +10,6 @@
 
 @interface LearnUIWebView : UIWebView
 + (instancetype)sharedInstance;
-- (void)ui_openURL:(NSString *)URL;
+- (void)ui_openURLString:(NSString *)URLString;
 
 @end
