@@ -40,23 +40,14 @@
     NSLog(@"哈哈哈，私有的对象方法");
 }
 
-+ (void)privateClassMethod:(NSString *)a {
-    NSLog(@"哈哈哈，私有的类方法");
+- (void)privateMethod2:(NSString *)name {
+    NSLog(@"哈哈哈，私有的对象方法2,\n参数为%@",name);
 }
 
 
-//- (void)excutePrivateMethodWithInstanceSelectorName:(NSString *)aSelectorName ForInstanceTarget:(NSString *)className {
-//    Class TargetClass = NSClassFromString(className);
-//    id aClass = [[TargetClass alloc] init];
-//
-//    SEL privateSelector = NSSelectorFromString(aSelectorName);
-//    NSMethodSignature *signature = [self methodSignatureForSelector:privateSelector];
-//
-//    NSInvocation *invovation  = [NSInvocation invocationWithMethodSignature:signature];
-//    [invovation setTarget:aClass];
-//    [invovation setSelector:privateSelector];
-//    [invovation invoke];
-//}
++ (void)privateClassMethod:(NSString *)a {
+    NSLog(@"哈哈哈，私有的类方法");
+}
 
 @end
 

@@ -35,6 +35,10 @@
 
 #import "LearnSelfAndSuper.h"
 
+#import "OCLearningOOP+GetPrivate.h"
+#import "NSObject+PrivateMethod.h"
+#import "OCLearningOOP.h"
+
 
 
 
@@ -52,7 +56,7 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method",@"block",@"GCD的leave,enter和wait",@"initialize",@"UIWebView",@"WKWebView",@"self&super"];
+    self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method",@"block",@"GCD的leave,enter和wait",@"initialize",@"UIWebView",@"WKWebView",@"self&super",@"调用私有方法的几种方式"];
     [self.funtionStyleTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kFuntionListOfViewController];
     [self.view addSubview:self.funtionStyleTableView];
     [ReadMeNSObjcet learnIDTypeInCollction];
@@ -311,8 +315,26 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
         [[LearnWKWebView sharedInstance] wk_openURLString:@"www.sohu.com"];
     } else if (indexPath.row == 13) {
         LearnChild *child = [[LearnChild alloc] init];
-        
+    } else if (indexPath.row == 14) {
+        [self testPrivateMethod];
     }
 }
 
+- (void)testPrivateMethod {
+    /*
+     调用私有方法的几种方式
+     1、 如果知道方法名，可以通过增加分离来实现私有方法扩充
+     
+     2、 直接通过NSMethodSignature方法签名，通过NSInvocation来调用实现
+     
+     3、 直接用C语言的底层方法，objc_msgSend()来实现方法获取
+     */
+    
+    [NSObject excutePrivateMethodWithInstanceSelector:@selector(privateMethod:) ForClass:@"OCLearningOOP"];
+    
+    OCLearningOOP *oop = [[OCLearningOOP alloc] init];
+    [oop privateMethodOfOCLearningOOPByCategory];
+    
+    objc_msgSend(oop, @selector(privateMethod2:),@"哈哈哈哈");
+}
 @end

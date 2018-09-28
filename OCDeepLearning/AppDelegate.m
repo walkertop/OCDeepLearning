@@ -10,11 +10,7 @@
 #import "AppDelegate+Addtions.h"
 #import <CoreData/CoreData.h>
 #import "CTMediator.h"
-#import "OCLearningOOP+GetPrivate.h"
-#import "NSObject+PrivateMethod.h"
-#import <objc/runtime.h>
-#import <objc/message.h>
-#import "OCLearningOOP.h"
+
 
 
 
@@ -32,11 +28,6 @@
     // Override point for customization after application launch.
     
     [self setupRootVC];
-    
-//    [NSObject excutePrivateMethodWithInstanceSelectorName:@"" ForClass:@"OCLearningOOP"];
-    [NSObject excutePrivateMethodWithInstanceSelector:@selector(privateMethod:) ForClass:@"OCLearningOOP"];
-
-//    objc_msgSend(oop, @selector(privateMethod:));
     return YES;
 }
 
@@ -75,30 +66,6 @@
 
 
 #pragma mark - privete method
-
-//- (NSManagedObjectModel *)managedObjectModel {
-//    if (!_managedObjectModel) {
-//        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"OCDeepLearning" withExtension:@"momd"];
-//        _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-//    }
-//    return _managedObjectModel;
-//}
-//
-//- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-//    if (!_persistentStoreCoordinator) {
-//        _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
-//
-//        NSURL *urlString = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
-//        NSURL *sqliteURL = [urlString URLByAppendingPathComponent:@"OCDeepLearning.sqlite"];
-//        NSError *error;
-//        [_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqliteURL options:nil error:&error];
-//        if (error) {
-//            NSLog(@"数据库存储失败，原因为 %@",error.localizedDescription);
-//        }
-//    }
-//    return _persistentStoreCoordinator;
-//}
-
 
 
 @end

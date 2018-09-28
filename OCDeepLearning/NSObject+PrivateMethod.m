@@ -8,6 +8,9 @@
 
 #import "NSObject+PrivateMethod.h"
 
+
+    // TODO: - 1. 调用私有的类方法
+
 @implementation NSObject (PrivateMethod)
 
 /**
@@ -60,4 +63,5 @@
     [invovation setSelector:aSelector];
     [invovation invoke];
 }
+
 @end
