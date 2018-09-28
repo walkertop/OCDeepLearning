@@ -10,6 +10,13 @@
 #import "AppDelegate+Addtions.h"
 #import <CoreData/CoreData.h>
 #import "CTMediator.h"
+#import "OCLearningOOP+GetPrivate.h"
+#import "NSObject+PrivateMethod.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
+#import "OCLearningOOP.h"
+
+
 
 @interface AppDelegate ()
 
@@ -26,6 +33,10 @@
     
     [self setupRootVC];
     
+//    [NSObject excutePrivateMethodWithInstanceSelectorName:@"" ForClass:@"OCLearningOOP"];
+    [NSObject excutePrivateMethodWithInstanceSelector:@selector(privateMethod:) ForClass:@"OCLearningOOP"];
+
+//    objc_msgSend(oop, @selector(privateMethod:));
     return YES;
 }
 

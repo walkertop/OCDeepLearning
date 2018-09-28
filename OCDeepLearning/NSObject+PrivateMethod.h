@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)excutePrivateMethodWithInstanceSelectorName:(NSString *)aSelectorName ForClass:(NSString *)className;
 
++ (void)excutePrivateMethodWithInstanceSelector:(SEL)aSelector ForClass:(NSString *)className;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCLearningOOP (GetPrivate)
-- (void)privateMethodOfOCLearningOOP;
+- (void)privateMethodOfOCLearningOOPByCategory;
 @end
 
 NS_ASSUME_NONNULL_END

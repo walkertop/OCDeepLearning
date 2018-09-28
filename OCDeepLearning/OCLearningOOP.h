@@ -12,8 +12,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCLearningOOP : NSObject
+
 @property(nonatomic, assign) NSInteger father;
-//- (void)excutePrivateMethodWithSelectorName:(NSString *)selectorName;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -32,36 +32,31 @@
 
 @implementation OCLearningOOP
 
-- (void)privateMethodOfOCLearningOOP {
-    NSLog(@"知道名字，直接通过分裂获取私有方法");
+- (void)privateMethodOfOCLearningOOPByCategory {
+    NSLog(@"哈哈哈，通过分类,实现私有方法的调用");
 }
 
 - (void)privateMethod:(NSString *)a {
-    NSLog(@"哈哈哈");
+    NSLog(@"哈哈哈，私有的对象方法");
 }
 
 + (void)privateClassMethod:(NSString *)a {
-    NSLog(@"哈哈哈，类方法");
+    NSLog(@"哈哈哈，私有的类方法");
 }
 
-/**
- <#Description#>
 
- @param aSelectorName <#aSelectorName description#>
- @param aInstanceTarget <#aInstanceTarget description#>
- */
-- (void)excutePrivateMethodWithInstanceSelectorName:(NSString *)aSelectorName ForInstanceTarget:(NSString *)className {
-    Class TargetClass = NSClassFromString(className);
-    id aClass = [[TargetClass alloc] init];
-    
-    SEL privateSelector = NSSelectorFromString(aSelectorName);
-    NSMethodSignature *signature = [self methodSignatureForSelector:privateSelector];
-    
-    NSInvocation *invovation  = [NSInvocation invocationWithMethodSignature:signature];
-    [invovation setTarget:aClass];
-    [invovation setSelector:privateSelector];
-    [invovation invoke];
-}
+//- (void)excutePrivateMethodWithInstanceSelectorName:(NSString *)aSelectorName ForInstanceTarget:(NSString *)className {
+//    Class TargetClass = NSClassFromString(className);
+//    id aClass = [[TargetClass alloc] init];
+//
+//    SEL privateSelector = NSSelectorFromString(aSelectorName);
+//    NSMethodSignature *signature = [self methodSignatureForSelector:privateSelector];
+//
+//    NSInvocation *invovation  = [NSInvocation invocationWithMethodSignature:signature];
+//    [invovation setTarget:aClass];
+//    [invovation setSelector:privateSelector];
+//    [invovation invoke];
+//}
 
 @end
 

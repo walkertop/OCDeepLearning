@@ -47,4 +47,17 @@
     [invovation setSelector:privateSelector];
     [invovation invoke];
 }
+
++ (void)excutePrivateMethodWithInstanceSelector:(SEL)aSelector ForClass:(NSString *)className {
+    Class TargetClass = NSClassFromString(className);
+    id aClass = [[TargetClass alloc] init];
+    if (!aClass) { return; }
+    
+    NSMethodSignature *signature = [aClass methodSignatureForSelector:aSelector];
+    
+    NSInvocation *invovation  = [NSInvocation invocationWithMethodSignature:signature];
+    [invovation setTarget:aClass];
+    [invovation setSelector:aSelector];
+    [invovation invoke];
+}
 @end
