@@ -56,7 +56,23 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.funtionStyleArray = @[@"自动释放池",@"GCD相关",@"KVC",@"SEL",@"分类Category",@"获取对象的引用计数",@"消息转发",@"测试SEl-IMP-Method",@"block",@"GCD的leave,enter和wait",@"initialize",@"UIWebView",@"WKWebView",@"self&super",@"调用私有方法的几种方式"];
+    self.funtionStyleArray = @[@"自动释放池",
+                               @"GCD相关",
+                               @"KVC",
+                               @"SEL",
+                               @"分类Category",
+                               @"获取对象的引用计数",
+                               @"消息转发",
+                               @"测试SEl-IMP-Method",
+                               @"block",
+                               @"GCD的leave,enter和wait",
+                               @"initialize",
+                               @"UIWebView",
+                               @"WKWebView",
+                               @"self&super",
+                               @"调用私有方法的几种方式",
+                               @"通知和 KVO 的线程调用问题"];
+    
     [self.funtionStyleTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kFuntionListOfViewController];
     [self.view addSubview:self.funtionStyleTableView];
     [ReadMeNSObjcet learnIDTypeInCollction];
@@ -317,6 +333,8 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
         LearnChild *child = [[LearnChild alloc] init];
     } else if (indexPath.row == 14) {
         [self testPrivateMethod];
+    } else if (indexPath.row == 15) {
+        [[LearnDatasourceClass sharedInstance] postNotify];
     }
 }
 

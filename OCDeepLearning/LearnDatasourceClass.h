@@ -15,6 +15,7 @@
 + (instancetype)sharedInstance;
 
 - (void)postNotify;
+- (void)addObserveNotify;
 - (void)learnKVO;
 
 

@@ -41,6 +41,8 @@ static NSString *const kThirdNotificationName = @"thirdNotificationName";
 
 #pragma mark - 通知
 - (void)postNotify {
+    [self addObserveNotify];
+    
     NSString *firstString  = @"这是第1个通知";
     NSString *secondString = @"这是第2个通知";
     NSString *thirdString  = @"这是第3个通知";
@@ -52,17 +54,17 @@ static NSString *const kThirdNotificationName = @"thirdNotificationName";
         NSLog(@"发送通知的线程是%@", [NSThread currentThread]);
     });
 
-    // 第一种方式执行通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(firstNotification:) name:kFirstNotificationName object:nil];
-    
-    // 第二种方式执行通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(secondNotification:) name:nil object:nil];
-    
-    // 第3种方式执行通知（第三个是子线程发送的通知，如果想在主线程中收到信息，则应该指定具体的队列
-    [[NSNotificationCenter defaultCenter] addObserverForName:kThirdNotificationName object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-        NSLog(@"接收通知的线程是%@", [NSThread currentThread]);
-        NSLog(@"通知的信息是%@",note);
-    }];
+//    // 第一种方式执行通知
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(firstNotification:) name:kFirstNotificationName object:nil];
+//
+//    // 第二种方式执行通知
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(secondNotification:) name:nil object:nil];
+//
+//    // 第3种方式执行通知（第三个是子线程发送的通知，如果想在主线程中收到信息，则应该指定具体的队列
+//    [[NSNotificationCenter defaultCenter] addObserverForName:kThirdNotificationName object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+//        NSLog(@"接收通知的线程是%@", [NSThread currentThread]);
+//        NSLog(@"通知的信息是%@",note);
+//    }];
     
 //    [[NSNotificationCenter defaultCenter] addObserverForName:kThirdNotificationName object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
 //        NSLog(@"接收通知的线程是%@", [NSThread currentThread]);
@@ -70,14 +72,22 @@ static NSString *const kThirdNotificationName = @"thirdNotificationName";
 //    }];
 }
 
-- (void)addobserveNotify {
+- (void)addObserveNotify {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(firstNotification:) name:kFirstNotificationName object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(secondNotification:) name:kSecondNotificationName object:nil];
 
-//    [[NSNotificationCenter defaultCenter] addObserverForName:kFirstNotificationName object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-//        NSLog(@"通知的信息%@",note.userInfo);
-//    }];
+    [[NSNotificationCenter defaultCenter] addObserverForName: kThirdNotificationName object:nil queue:NSOperationQueue.mainQueue usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"queue == mainQueue,此时的通知的信息%@,当前线程是%@",note.userInfo, [NSThread currentThread]);
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:kThirdNotificationName object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"queue == nil, 此时的通知的信息%@,当前线程是%@",note.userInfo, [NSThread currentThread]);
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:kThirdNotificationName object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+           NSLog(@"通知的信息%@",note.userInfo);
+       }];
 }
 
 - (void)firstNotification:(NSNotification *)notify {

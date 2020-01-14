@@ -47,14 +47,13 @@
      当编译器遇到 [super setName:] 时，开始做这几个事：
      
      1）构 建 objc_super 的结构体，此时这个结构体的第一个成员变量 receiver 就是 子类，和 self 相同。而第二个成员变量 superClass 就是指父类
-     调用 objc_msgSendSuper 的方法，将这个结构体和 setName 的 sel 传递过去。
+     调用 objc_msgSendSuper 的方法，将这个结构体和 setName 的 self 传递过去。
      
      2）函数里面在做的事情类似这样：从 objc_super 结构体指向的 superClass 的方法列表开始找 setName 的 selector，找到后再以 objc_super->receiver 去调用这个 selector
      
     */
     NSLog(@"%@--------",object_getClass(self));
     NSLog(@"%@--------",object_getClass(self.superclass));
-    
     
     NSLog(@"打印self的值是%@",self);
     NSLog(@"调用self.superclass方法，返回值是%@",self.superclass);
