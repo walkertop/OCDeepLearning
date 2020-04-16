@@ -23,7 +23,7 @@
 /*
  1. 数组的元素可以为多种对象类型
  */
-+ (void)learnIDTypeInCollction {
++ (void)learnIDTypeInCollection {
     //数组
     NSDictionary *learnDict = @{@"key": @"value"};
     NSArray *learnArray = [NSArray arrayWithObjects:@"11", @2, learnDict, nil];

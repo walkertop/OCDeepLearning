@@ -10,5 +10,5 @@
 
 @interface ReadMeNSObjcet : NSObject
 
-+ (void)learnIDTypeInCollction; 
++ (void)learnIDTypeInCollection; 
 @end

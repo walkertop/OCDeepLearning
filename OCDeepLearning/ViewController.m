@@ -39,9 +39,6 @@
 #import "NSObject+PrivateMethod.h"
 #import "OCLearningOOP.h"
 
-
-
-
 static NSString  *const kFuntionListOfViewController = @"funtionListOfViewController";
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -75,7 +72,7 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
     
     [self.funtionStyleTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kFuntionListOfViewController];
     [self.view addSubview:self.funtionStyleTableView];
-    [ReadMeNSObjcet learnIDTypeInCollction];
+    [ReadMeNSObjcet learnIDTypeInCollection];
 //    APTBegin;
 //    APTBeginSection("test");
     // Do any additional setup after loading the view, typically from a nib.
@@ -102,7 +99,7 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
 //    APTEnd;
     
 //    [[LearnDatasourceClass sharedInstance] postNotify];
-    [[LearnDatasourceClass sharedInstance] learnKVO];
+//    [[LearnDatasourceClass sharedInstance] learnKVO];
 
 }
 
@@ -191,9 +188,6 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
     OC_SEL *oc_sel = [[OC_SEL alloc] init];
     [oc_sel testSEL];
 }
-
-
-
 
 - (void)testOCIMP {
     OC_IMP *oc_imp = [[OC_IMP alloc] init];
@@ -330,7 +324,9 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
     } else if (indexPath.row == 12) {
         [[LearnWKWebView sharedInstance] wk_openURLString:@"www.sohu.com"];
     } else if (indexPath.row == 13) {
-        LearnChild *child = [[LearnChild alloc] init];
+//      LearnChild *child = [[LearnChild alloc] init];
+//      LearnFather *father = [[LearnFather alloc] init];
+//      [father performSelector:@selector(test)];
     } else if (indexPath.row == 14) {
         [self testPrivateMethod];
     } else if (indexPath.row == 15) {
@@ -355,4 +351,7 @@ static NSString  *const kFuntionListOfViewController = @"funtionListOfViewContro
     
     objc_msgSend(oop, @selector(privateMethod2:),@"哈哈哈哈");
 }
+
 @end
+
+

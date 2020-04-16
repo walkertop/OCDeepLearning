@@ -34,7 +34,8 @@
     ///p1和m1对应的是两个地址
     
 //    NSLog(@"method分别是%p,/n %p",m3,m4);
-    
+        NSLog(@"method分别是%p,/n %p",m3,m4);
+
     method_exchangeImplementations(m3, m4);
 }
 

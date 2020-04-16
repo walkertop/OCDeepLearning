@@ -18,8 +18,13 @@
 
 - (instancetype)init {
     self = [super init];
-    
+    NSLog(@"LearnChild 当前类是 == %@, 调用self的class方法，返回值是%@",[self class], [self class]);
+    NSLog(@"LearnChild 调用super的class方法，返回值是%@",[super class]);
     return self;
+}
+
+- (void)test {
+  NSLog(@"哈哈哈的测试方法");
 }
 
 @end
@@ -28,7 +33,7 @@
 
 - (instancetype)init {
     self = [super init];
-    NSLog(@"调用self的class方法，返回值是%@",[self class]);
+    NSLog(@"当前类是 == %@, 调用self的class方法，返回值是%@",[self class], [self class]);
     NSLog(@"调用super的class方法，返回值是%@",[super class]);
     /*
      self和super底层实现原理：

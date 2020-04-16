@@ -17,6 +17,6 @@
 @end
 
 @interface LearnChild: LearnFather
-
+- (void)test;
 @end
 

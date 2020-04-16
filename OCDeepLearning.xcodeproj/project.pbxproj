@@ -71,6 +71,7 @@
 		5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622CF1F161E5200D74036 /* ViewController+SwizzlingMethod.m */; };
 		5DF622D41F1620DD00D74036 /* NSObject+GBRuntimeLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */; };
 		5DF90FE71F1C5AF100B809C5 /* OC_AClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF90FE61F1C5AF100B809C5 /* OC_AClass.m */; };
+		5DFA619B2429B3BF00B25059 /* DPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFA619A2429B3BF00B25059 /* DPViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -246,6 +247,9 @@
 		5DF622D31F1620DD00D74036 /* NSObject+GBRuntimeLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GBRuntimeLog.m"; sourceTree = "<group>"; };
 		5DF90FE51F1C5AF100B809C5 /* OC_AClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OC_AClass.h; sourceTree = "<group>"; };
 		5DF90FE61F1C5AF100B809C5 /* OC_AClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OC_AClass.m; sourceTree = "<group>"; };
+		5DFA61992429B3BF00B25059 /* DPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPViewController.h; sourceTree = "<group>"; };
+		5DFA619A2429B3BF00B25059 /* DPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPViewController.m; sourceTree = "<group>"; };
+		5DFA619C2429B3DD00B25059 /* DPProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +379,7 @@
 		5D5F4E7D1F0F6786000DE712 /* OCDeepLearning */ = {
 			isa = PBXGroup;
 			children = (
+				5DFA61982429B38700B25059 /* Design Pattern */,
 				5D24F1FF215DD0160015A6BC /* PrivateMethod&Property */,
 				5DE398E021368E44003F50FF /* Manager */,
 				5D60C5B4212B021000AB9BFD /* self & super */,
@@ -687,6 +692,16 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		5DFA61982429B38700B25059 /* Design Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				5DFA61992429B3BF00B25059 /* DPViewController.h */,
+				5DFA619A2429B3BF00B25059 /* DPViewController.m */,
+				5DFA619C2429B3DD00B25059 /* DPProtocol.h */,
+			);
+			name = "Design Pattern";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -854,6 +869,7 @@
 				5DF622D01F161E5200D74036 /* ViewController+SwizzlingMethod.m in Sources */,
 				5D24F204215DD0380015A6BC /* OCLearningOOP.m in Sources */,
 				5D60C5B7212B023100AB9BFD /* LearnSelfAndSuper.m in Sources */,
+				5DFA619B2429B3BF00B25059 /* DPViewController.m in Sources */,
 				5D6588CF212ADCBB0092BD78 /* LearnWebViewController.m in Sources */,
 				5D14933A210DB43E0070B1B8 /* ReadMeNSObjcet.m in Sources */,
 				5D4B92101F28A4B6004A242C /* LearnCategory+Addtion2.m in Sources */,
